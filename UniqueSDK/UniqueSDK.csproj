@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Substrate.NET.API" Version="0.9.20" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Substrate.NetApiExt\Substrate.NetApiExt.csproj" />
+  </ItemGroup>
+</Project>
