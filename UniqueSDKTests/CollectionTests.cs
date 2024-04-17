@@ -7,7 +7,7 @@ using Substrate.NetApi.Model.Extrinsics;
 
 namespace UniqueSDKTests;
 
-public class Tests
+public class CollectionTests
 {
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     private Account account;
@@ -59,7 +59,7 @@ public class Tests
 
         Response response = await CollectionModel.CreateCollectionRestAsync(collection, 0);
 
-        Console.WriteLine(response.signerPayloadJSON.method);
+        Console.WriteLine(response.signerPayloadHex);
     }
 
     [Test]

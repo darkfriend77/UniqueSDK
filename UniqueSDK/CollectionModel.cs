@@ -14,8 +14,8 @@ using Substrate.NetApiExt.Generated.Model.up_data_structs;
 
 namespace UniqueSDK
 {
-	public class CollectionModel
-	{
+    public class CollectionModel
+    {
         /// <summary>
         /// https://rest.unique.network/opal/swagger#/collections/createCollectionMutationSchemaV2
         /// </summary>
@@ -32,11 +32,11 @@ namespace UniqueSDK
             uint nonce,
             UseEnum use = UseEnum.Build,
             bool withFee = false,
-			bool verify = false,
-			string? callbackUrl = null
-		)
-		{
-			string callback = callbackUrl is null ? "" : $"&callbackUrl={callbackUrl}"; // Handle string encoding
+            bool verify = false,
+            string? callbackUrl = null
+        )
+        {
+            string callback = callbackUrl is null ? "" : $"&callbackUrl={callbackUrl}"; // Handle string encoding
 
             var url = $"{Constants.OPAL_REST_URL}/collections/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
 
@@ -114,7 +114,8 @@ namespace UniqueSDK
             bool verify = false,
             string? callbackUrl = null,
             bool signed = true,
-            CancellationToken cancellationToken = default)
+            CancellationToken cancellationToken = default
+        )
         {
             // If nonce is not provided, get a new one
             nonce ??= await substrateClient.System.AccountNextIndexAsync(account.Value, cancellationToken);
@@ -128,6 +129,37 @@ namespace UniqueSDK
                 callbackUrl
             );
 
+            return await SignAndSubmitCreateCollectionExtrinsicAsync(
+                substrateClient,
+                account,
+                response,
+                customCallback,
+                signed,
+                cancellationToken
+            );
+        }
+
+        /// <summary>
+        /// Constructs the CreateCollectionEx extrinsic, signs it, submits it to the chain,
+        /// listens to on-chain events and filters the events for Common.CollectionCreated
+        /// to get the CollectionId of the newly created Collection.
+        /// </summary>
+        /// <param name="substrateClient"></param>
+        /// <param name="account"></param>
+        /// <param name="response"></param>
+        /// <param name="customCallback"></param>
+        /// <param name="signed"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>Collection Id of the newly created Collection</returns>
+        public static async Task<uint?> SignAndSubmitCreateCollectionExtrinsicAsync(
+            SubstrateClientExt substrateClient,
+            Account account,
+            Response response,
+            Action<string, ExtrinsicStatus>? customCallback = null,
+            bool signed = true,
+            CancellationToken cancellationToken = default
+        )
+        {
             UnCheckedExtrinsic unCheckedExtrinsic = await response.signerPayloadJSON.ToExtrinsicAsync(account, signed);
 
             var collectionIdTask = new TaskCompletionSource<uint?>();
@@ -181,7 +213,7 @@ namespace UniqueSDK
                         }
 
                         break;
-                    
+
                 }
             };
 #pragma warning restore VSTHRD101 // Avoid unsupported async delegates
@@ -206,14 +238,14 @@ namespace UniqueSDK
         }
     }
 
-	public enum UseEnum
-	{
-		Build,
-		BuildSequence,
-		Sign,
-		Submit,
-		Result,
-		GetFee,
-	}
+    public enum UseEnum
+    {
+        Build,
+        BuildSequence,
+        Sign,
+        Submit,
+        Result,
+        GetFee,
+    }
 }
 
