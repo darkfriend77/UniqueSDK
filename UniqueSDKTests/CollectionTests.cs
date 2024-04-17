@@ -4,6 +4,7 @@ using UniqueSDK;
 using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApiExt.Generated;
 using Substrate.NetApi.Model.Extrinsics;
+using Substrate.NetApi;
 
 namespace UniqueSDKTests;
 
@@ -29,7 +30,7 @@ public class CollectionTests
 
         // Substrate client
         client = new SubstrateClientExt(
-                new System.Uri(Constants.OPAL_NODE_URL),
+                new System.Uri(UniqueSDK.Constants.OPAL_NODE_URL),
                 ChargeTransactionPayment.Default());
 
         await client.ConnectAsync();
@@ -107,6 +108,60 @@ public class CollectionTests
         };
 
         uint? collectionId = await CollectionModel.SignAndSubmitCreateCollectionExtrinsicAsync(client, account, collection, myCallback);
+
+        Console.WriteLine("Collection id: " + collectionId);
+    }
+
+    [Test]
+    public async Task CreateCollectionAndGetFeeTestAsync()
+    {
+        Collection collection = new Collection
+        {
+            Address = account.Value, // Or any other string SS58 address
+            CoverImage = new Image
+            {
+                Url = "https://ipfs.unique.network/ipfs/QmcAcH4F9HYQtpqKHxBFwGvkfKb8qckXj2YWUrcc8yd24G/image1.png",
+            },
+            PotentialAttributes = new List<PotentialAttribute> {
+                new PotentialAttribute{
+                    TraitType = "color",
+                    Values = new List<string>
+                    {
+                        "red",
+                        "green",
+                        "blue"
+                    }
+                }
+            }
+        };
+
+        var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
+
+        Response response = await CollectionModel.CreateCollectionRestAsync(collection, nonce, withFee: true);
+
+        Console.WriteLine($"Fee: {response.fee.amount} {response.fee.unit}");
+
+        Action<string, ExtrinsicStatus> myCallback = (string id, ExtrinsicStatus status) =>
+        {
+            if (status.ExtrinsicState == ExtrinsicState.Ready)
+            {
+                Console.WriteLine("Ready");
+            }
+            else if (status.ExtrinsicState == ExtrinsicState.Dropped)
+            {
+                Console.WriteLine("Dropped");
+            }
+            else if (status.ExtrinsicState == ExtrinsicState.InBlock)
+            {
+                Console.WriteLine("In block");
+            }
+            else if (status.ExtrinsicState == ExtrinsicState.Finalized)
+            {
+                Console.WriteLine("Finalized");
+            }
+        };
+
+        uint? collectionId = await CollectionModel.SignAndSubmitCreateCollectionExtrinsicAsync(client, account, response, myCallback);
 
         Console.WriteLine("Collection id: " + collectionId);
     }
