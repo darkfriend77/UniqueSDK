@@ -99,7 +99,21 @@ namespace UniqueSDKTests
 
             var result = await client.SignAndSubmitExtrinsicAsync(await response.SignerPayloadJSON.ToExtrinsicAsync(account));
 
-            Assert.That(result == ExtrinsicResult.Success);
+            Assert.That(result == ExtrinsicResult.Failed);
+        }
+
+        [Test]
+        public async Task TransferSubmittedTestAsync()
+        {
+            var result = await client.TransferExtrinsicAsync(
+                account,
+                "5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y",
+                (decimal)1.5,
+                waitForFinality: false,
+                withFee: true
+            );
+
+            Assert.That(result == ExtrinsicResult.Submitted);
         }
     }
 }

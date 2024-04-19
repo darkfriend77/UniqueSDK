@@ -1,7 +1,4 @@
-﻿using System.Text;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-using Substrate.NetApi.Model.Rpc;
+﻿using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
 using Substrate.NetApiExt.Generated;
 using Substrate.NetApiExt.Generated.Model.sp_core.crypto;
@@ -15,7 +12,7 @@ namespace UniqueSDK
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="accountId32"></param>
-        /// <param name="cancellationToken"></param>
+        /// <param name="cancellationToken"></param>xw
         /// <returns>Abstracted AccountInfo</returns>
         public static async Task<AccountInfo> GetAccountInfoAsync(
             this SubstrateClientExt substrateClient,
