@@ -14,6 +14,7 @@ namespace UniqueSDK
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="unCheckedExtrinsic"></param>
+        /// <param name="waitForFinality">Set to false, if you do not want to await until the Finality is confirmed</param>
         /// <param name="customCallback"></param>
         /// <param name="cancellationToken"></param>
         /// <returns>Status of the submitted extrinsic</returns>

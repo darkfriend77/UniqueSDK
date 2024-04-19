@@ -12,7 +12,7 @@ namespace UniqueSDK
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="accountId32"></param>
-        /// <param name="cancellationToken"></param>xw
+        /// <param name="cancellationToken"></param>
         /// <returns>Abstracted AccountInfo</returns>
         public static async Task<AccountInfo> GetAccountInfoAsync(
             this SubstrateClientExt substrateClient,
@@ -109,6 +109,7 @@ namespace UniqueSDK
         /// <param name="destinationAddress"></param>
         /// <param name="amount"></param>
         /// <param name="customCallback"></param>
+        /// <param name="waitForFinality">Set to false, if you do not want to await until the Finality is confirmed</param>
         /// <param name="nonce"></param>
         /// <param name="use"></param>
         /// <param name="withFee"></param>
