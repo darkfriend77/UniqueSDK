@@ -10,11 +10,9 @@ namespace UniqueSDKTests;
 
 public class CollectionTests
 {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     private Account account;
 
     private SubstrateClientExt client;
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
     [SetUp]
     public async Task SetupAsync()
@@ -60,7 +58,7 @@ public class CollectionTests
 
         Response response = await CollectionModel.CreateCollectionRestAsync(collection, 0);
 
-        Console.WriteLine(response.signerPayloadHex);
+        Console.WriteLine(response.SignerPayloadHex);
     }
 
     [Test]
@@ -139,7 +137,7 @@ public class CollectionTests
 
         Response response = await CollectionModel.CreateCollectionRestAsync(collection, nonce, withFee: true);
 
-        Console.WriteLine($"Fee: {response.fee.amount} {response.fee.unit}");
+        Console.WriteLine($"Fee: {response.Fee.Amount} {response.Fee.Unit}");
 
         Action<string, ExtrinsicStatus> myCallback = (string id, ExtrinsicStatus status) =>
         {

@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-using Substrate.NetApi;
+﻿using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
@@ -25,6 +21,7 @@ namespace UniqueSDK
         /// <param name="withFee"></param>
         /// <param name="verify"></param>
         /// <param name="callbackUrl"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
 		public static async Task<Response> CreateCollectionRestAsync(
@@ -33,61 +30,19 @@ namespace UniqueSDK
             UseEnum use = UseEnum.Build,
             bool withFee = false,
             bool verify = false,
-            string? callbackUrl = null
+            string? callbackUrl = null,
+            CancellationToken cancellationToken = default
         )
         {
             string callback = callbackUrl is null ? "" : $"&callbackUrl={callbackUrl}"; // Handle string encoding
 
-            var url = $"{Constants.OPAL_REST_URL}/collections/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
+            var url = $"{Constants.OPAL_REST_URL}/v1/collections/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
 
-            var client = new HttpClient();
-
-            string json = System.Text.Json.JsonSerializer.Serialize(
-                collection,
-                new System.Text.Json.JsonSerializerOptions
-                {
-                    // Ignore all default / null properties
-                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
-                }
-            );
-
-            var content = new StringContent(
-                json,
-                Encoding.UTF8,
-                "application/json"
-            );
-
-            // Add headers
-            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-            try
-            {
-                var response = await client.PostAsync(url, content);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-
-                    return JsonConvert.DeserializeObject<Response>(responseContent) ?? new Response();
-                }
-                else
-                {
-                    Console.WriteLine("Request failed.");
-                    Console.WriteLine($"Status Code: {response.StatusCode}");
-                    Console.WriteLine(await response.Content.ReadAsStringAsync());
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception occurred: {ex.Message}");
-            }
-
-            // Handle the Exception better
-            throw new Exception("Rest request failed");
+            return await RestModel.ExecutePostAsync(url, collection, cancellationToken);
         }
 
         /// <summary>
-        /// Constructs the CreateCollectionEx extrinsic, signs it, submits it to the chain,
+        /// Constructs the Unique.createCollectionEx extrinsic, signs it, submits it to the chain,
         /// listens to on-chain events and filters the events for Common.CollectionCreated
         /// to get the CollectionId of the newly created Collection.
         /// </summary>
@@ -126,7 +81,8 @@ namespace UniqueSDK
                 use,
                 withFee,
                 verify,
-                callbackUrl
+                callbackUrl,
+                cancellationToken
             );
 
             return await SignAndSubmitCreateCollectionExtrinsicAsync(
@@ -140,7 +96,7 @@ namespace UniqueSDK
         }
 
         /// <summary>
-        /// Constructs the CreateCollectionEx extrinsic, signs it, submits it to the chain,
+        /// Constructs the Unique.createCollectionEx extrinsic, signs it, submits it to the chain,
         /// listens to on-chain events and filters the events for Common.CollectionCreated
         /// to get the CollectionId of the newly created Collection.
         /// </summary>
@@ -160,7 +116,7 @@ namespace UniqueSDK
             CancellationToken cancellationToken = default
         )
         {
-            UnCheckedExtrinsic unCheckedExtrinsic = await response.signerPayloadJSON.ToExtrinsicAsync(account, signed);
+            UnCheckedExtrinsic unCheckedExtrinsic = await response.SignerPayloadJSON.ToExtrinsicAsync(account, signed);
 
             var collectionIdTask = new TaskCompletionSource<uint?>();
 
@@ -236,16 +192,6 @@ namespace UniqueSDK
             // Return the resulting Collection Id
             return await collectionIdTask.Task;
         }
-    }
-
-    public enum UseEnum
-    {
-        Build,
-        BuildSequence,
-        Sign,
-        Submit,
-        Result,
-        GetFee,
     }
 }
 

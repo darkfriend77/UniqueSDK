@@ -8,7 +8,7 @@ using Substrate.NetApiExt.Generated.Model.frame_system;
 
 namespace UniqueSDK
 {
-    public class EventsModel
+    public static class EventsModel
     {
         /// <summary>
         /// Gets all extrinsic events in the block
@@ -18,7 +18,11 @@ namespace UniqueSDK
         /// <param name="unCheckedExtrinsic"></param>
         /// <returns>all events for the given extrinsic</returns>
         /// <exception cref="ExtrinsicIndexNotFoundException"></exception>
-        public static async Task<IEnumerable<EventRecord>> GetExtrinsicEventsAsync(SubstrateClientExt substrateClient, Hash blockHash, UnCheckedExtrinsic unCheckedExtrinsic)
+        public static async Task<IEnumerable<EventRecord>> GetExtrinsicEventsAsync(
+            this SubstrateClientExt substrateClient,
+            Hash blockHash,
+            UnCheckedExtrinsic unCheckedExtrinsic
+        )
         {
             var events = await substrateClient.SystemStorage.Events(blockHash.Value, CancellationToken.None);
 
