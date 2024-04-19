@@ -1,7 +1,5 @@
-# Create Collection Example
-
-```c#
-
+# Setup
+```C#
 // Account creation
 var mnemonics = "collect salad honey track clerk energy agent empty edit devote mixed injury";
 
@@ -17,7 +15,46 @@ var client = new SubstrateClientExt(
         ChargeTransactionPayment.Default());
 
 await client.ConnectAsync();
+```
 
+# Query Free Balance Example
+```C#
+AccountInfo accountInfo = await client.GetAccountInfoAsync(account);
+
+Console.WriteLine($"Free balance: {accountInfo.Data.Free.Amount} {accountInfo.Data.Free.Unit}");
+```
+
+```C#
+string destinationAddress = "5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y";
+
+AccountInfo accountInfo = await client.GetAccountInfoAsync(destinationAddress);
+
+Console.WriteLine($"Free balance: {accountInfo.Data.Free.Amount} {accountInfo.Data.Free.Unit}");
+```
+
+# Balance Transfer Example
+
+```C#
+var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
+
+Response response = await BalancesModel.TransferRestAsync(
+account.Value,
+"5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y",
+(decimal)1.5,
+nonce,
+withFee: true
+);
+
+Console.WriteLine($"Fee: {response.Fee.Amount} {response.Fee.Unit}");
+
+var result = await client.SignAndSubmitExtrinsicAsync(await response.SignerPayloadJSON.ToExtrinsicAsync(account));
+
+Assert.That(result == ExtrinsicResult.Success);
+```
+
+# Create Collection Example
+
+```c#
 Action<string, ExtrinsicStatus> myCallback = (string id, ExtrinsicStatus status) =>
 {
     if (status.ExtrinsicState == ExtrinsicState.Ready)
