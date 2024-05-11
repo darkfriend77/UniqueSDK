@@ -14,7 +14,7 @@ namespace UniqueSDK
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-		public static async Task<Response> ExecutePostAsync(
+		public static async Task<RestResponse> ExecutePostAsync(
             string url,
             object parameters,
             CancellationToken cancellationToken = default
@@ -49,7 +49,7 @@ namespace UniqueSDK
                 {
                     string responseContent = await response.Content.ReadAsStringAsync();
 
-                    return JsonConvert.DeserializeObject<Response>(responseContent) ?? new Response();
+                    return JsonConvert.DeserializeObject<RestResponse>(responseContent) ?? new ();
                 }
                 else
                 {

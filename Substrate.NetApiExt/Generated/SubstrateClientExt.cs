@@ -9,10 +9,13 @@
 
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Meta;
+using Substrate.NetApi.Model.Rpc;
+using Substrate.NetApi.Model.Types;
 using Substrate.NetApi.Model.Types.Base;
 using Substrate.NetApiExt.Generated.Storage;
+using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
 
 namespace Substrate.NetApiExt.Generated
 {

@@ -9,7 +9,7 @@ using System.Net;
 
 namespace UniqueSDK
 {
-    public class Response
+    public class RestResponse
     {
         public SignerPayloadJSON SignerPayloadJSON { get; set; }
         public SignerPayloadRaw SignerPayloadRaw { get; set; }

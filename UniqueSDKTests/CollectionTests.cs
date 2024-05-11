@@ -4,7 +4,7 @@ using UniqueSDK;
 using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApiExt.Generated;
 using Substrate.NetApi.Model.Extrinsics;
-using Substrate.NetApi;
+using Newtonsoft.Json;
 
 namespace UniqueSDKTests;
 
@@ -17,6 +17,9 @@ public class CollectionTests
     [SetUp]
     public async Task SetupAsync()
     {
+        // SdkConfig
+        SdkConfig.UseDefaultNetwork = NetworkEnum.Opal;
+
         // Account creation
         var mnemonics = "collect salad honey track clerk energy agent empty edit devote mixed injury";
 
@@ -28,7 +31,7 @@ public class CollectionTests
 
         // Substrate client
         client = new SubstrateClientExt(
-                new System.Uri(UniqueSDK.Constants.OPAL_NODE_URL),
+                new System.Uri(Constants.OPAL_NODE_URL),
                 ChargeTransactionPayment.Default());
 
         await client.ConnectAsync();
@@ -37,12 +40,13 @@ public class CollectionTests
     [Test]
     public async Task CreateCollectionRestTestAsync()
     {
-        Collection collection = new Collection
+        var collection = new UniqueCollectionRest
         {
             Address = account.Value, // Or any other string SS58 address
             CoverImage = new Image {
                 Url = "https://ipfs.unique.network/ipfs/QmcAcH4F9HYQtpqKHxBFwGvkfKb8qckXj2YWUrcc8yd24G/image1.png",
             },
+            Name = "Test from the C# Unique SDK",
             PotentialAttributes = new List<PotentialAttribute> {
                 new PotentialAttribute{
                     TraitType = "color",
@@ -56,7 +60,7 @@ public class CollectionTests
             }
         };
 
-        Response response = await CollectionModel.CreateCollectionRestAsync(collection, 0);
+        var response = await CollectionModel.CreateCollectionRestAsync(collection, 0);
 
         Console.WriteLine(response.SignerPayloadHex);
     }
@@ -84,25 +88,12 @@ public class CollectionTests
             }
         };
 
-        Collection collection = new Collection
+        var collection = new Collection
         {
-            Address = account.Value, // Or any other string SS58 address
-            CoverImage = new Image
-            {
-                Url = "https://ipfs.unique.network/ipfs/QmcAcH4F9HYQtpqKHxBFwGvkfKb8qckXj2YWUrcc8yd24G/image1.png",
-            },
-            Name = "Test Collection 5",
-            PotentialAttributes = new List<PotentialAttribute> {
-                new PotentialAttribute{
-                    TraitType = "color",
-                    Values = new List<string>
-                    {
-                        "red",
-                        "green",
-                        "blue"
-                    }
-                }
-            }
+            Owner = account.Value, // Or any other string SS58 address
+            CollectionCover = "https://ipfs.unique.network/ipfs/QmcAcH4F9HYQtpqKHxBFwGvkfKb8qckXj2YWUrcc8yd24G/image1.png",
+            Name = "C# is BEST",
+            Description = "This is the second use case of creating collection from C# Unique SDK in unit tests. Also, everyone knows that rust is better :).",
         };
 
         uint? collectionId = await CollectionModel.SignAndSubmitCreateCollectionExtrinsicAsync(client, account, collection, myCallback);
@@ -113,7 +104,7 @@ public class CollectionTests
     [Test]
     public async Task CreateCollectionAndGetFeeTestAsync()
     {
-        Collection collection = new Collection
+        var collection = new UniqueCollectionRest
         {
             Address = account.Value, // Or any other string SS58 address
             CoverImage = new Image
@@ -135,7 +126,7 @@ public class CollectionTests
 
         var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
 
-        Response response = await CollectionModel.CreateCollectionRestAsync(collection, nonce, withFee: true);
+        var response = await CollectionModel.CreateCollectionRestAsync(collection, nonce, withFee: true);
 
         Console.WriteLine($"Fee: {response.Fee.Amount} {response.Fee.Unit}");
 
@@ -159,8 +150,46 @@ public class CollectionTests
             }
         };
 
-        uint? collectionId = await CollectionModel.SignAndSubmitCreateCollectionExtrinsicAsync(client, account, response, myCallback);
+        uint? collectionId = await client.SignAndSubmitCreateCollectionExtrinsicAsync(account, response, myCallback);
 
         Console.WriteLine("Collection id: " + collectionId);
+
+    }
+
+    [Test]
+    public async Task GetCollectionByIdAsync()
+    {
+        var collectionId = 2753;
+
+        var collection = await CollectionModel.GetCollectionByIdAsync(collectionId);
+
+        Assert.NotNull(collection);
+
+        Console.WriteLine(JsonConvert.SerializeObject(collection));
+
+        var newCollection = JsonConvert.DeserializeObject<Collection>(JsonConvert.SerializeObject(collection));
+
+        Console.WriteLine(JsonConvert.SerializeObject(newCollection));
+    }
+
+    [Test]
+    public async Task GetCollectionByNameAsync()
+    {
+        var collectionName = "C# is BEST";
+
+        var collections = await CollectionModel.GetCollectionsByNameAsync(collectionName, limit: 2);
+
+        Assert.That(collections.Any());
+    }
+
+    [Test]
+    public async Task GetCollectionListByOwnerAsync()
+    {
+        var owner = account.Value;
+
+        var collections = await CollectionModel.GetCollectionsByOwnerAsync(owner);
+
+        Assert.That(collections.Any());
     }
 }
+

@@ -12,21 +12,26 @@ namespace UniqueSDK
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="accountId32"></param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="cancellationToken"></param>
         /// <returns>Abstracted AccountInfo</returns>
         public static async Task<AccountInfo> GetAccountInfoAsync(
             this SubstrateClientExt substrateClient,
             AccountId32 accountId32,
+            NetworkEnum? network = null,
             CancellationToken cancellationToken = default
         )
         {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
             Substrate.NetApiExt.Generated.Model.frame_system.AccountInfo accountInfo = await substrateClient.SystemStorage.Account(
                 accountId32,
                 null,
                 cancellationToken
             );
 
-            return new AccountInfo(accountInfo, Constants.OPAL_DECIMALS, Constants.OPAL_UNIT);
+            return new AccountInfo(accountInfo, Constants.GetDecimals(network), Constants.GetUnit(network));
         }
 
         /// <summary>
@@ -34,15 +39,17 @@ namespace UniqueSDK
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="address"></param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="cancellationToken"></param>
         /// <returns>Abstracted AccountInfo</returns>
         public static async Task<AccountInfo> GetAccountInfoAsync(
             this SubstrateClientExt substrateClient,
             string address,
+            NetworkEnum? network = null,
             CancellationToken cancellationToken = default
         )
         {
-            return await substrateClient.GetAccountInfoAsync(address.ToAccountId32(), cancellationToken);
+            return await substrateClient.GetAccountInfoAsync(address.ToAccountId32(), network, cancellationToken);
         }
 
         /// <summary>
@@ -50,15 +57,17 @@ namespace UniqueSDK
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="account"></param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="cancellationToken"></param>
         /// <returns>Abstracted AccountInfo</returns>
         public static async Task<AccountInfo> GetAccountInfoAsync(
             this SubstrateClientExt substrateClient,
             Account account,
+            NetworkEnum? network = null,
             CancellationToken cancellationToken = default
         )
         {
-            return await substrateClient.GetAccountInfoAsync(account.ToAccountId32(), cancellationToken);
+            return await substrateClient.GetAccountInfoAsync(account.ToAccountId32(), network, cancellationToken);
         }
 
         /// <summary>
@@ -68,17 +77,19 @@ namespace UniqueSDK
         /// <param name="destinationAddress">destination</param>
         /// <param name="amount"></param>
         /// <param name="nonce"></param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="use"></param>
         /// <param name="withFee"></param>
         /// <param name="verify"></param>
         /// <param name="callbackUrl"></param>
         /// <param name="cancellationToken"></param>
         /// <returns>Response</returns>
-        public static async Task<Response> TransferRestAsync(
+        public static async Task<RestResponse> TransferRestAsync(
             string address,
             string destinationAddress,
             decimal amount,
             uint nonce,
+            NetworkEnum? network = null,
             UseEnum use = UseEnum.Build,
             bool withFee = false,
             bool verify = false,
@@ -86,9 +97,12 @@ namespace UniqueSDK
             CancellationToken cancellationToken = default
         )
         {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
             string callback = callbackUrl is null ? "" : $"&callbackUrl={callbackUrl}"; // Handle string encoding
 
-            var url = $"{Constants.OPAL_REST_URL}/v1/balance/transfer?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
+            var url = $"{Constants.GetRestUrl(network)}/v1/balance/transfer?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
 
             var transfer = new Transfer
             {
@@ -109,6 +123,7 @@ namespace UniqueSDK
         /// <param name="destinationAddress"></param>
         /// <param name="amount"></param>
         /// <param name="customCallback"></param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="waitForFinality">Set to false, if you do not want to await until the Finality is confirmed</param>
         /// <param name="nonce"></param>
         /// <param name="use"></param>
@@ -117,12 +132,13 @@ namespace UniqueSDK
         /// <param name="callbackUrl"></param>
         /// <param name="cancellationToken"></param>
         /// <returns>Status of the submitted extrinsic</returns>
-        public static async Task<ExtrinsicResult> TransferExtrinsicAsync(
+        public static async Task<ExtrinsicResult> SignAndSubmitTransferExtrinsicAsync(
             this SubstrateClientExt substrateClient,
             Account account,
             string destinationAddress,
             decimal amount,
             bool waitForFinality = true,
+            NetworkEnum? network = null,
             Action<string, ExtrinsicStatus>? customCallback = null,
             uint? nonce = null,
             UseEnum use = UseEnum.Build,
@@ -132,14 +148,18 @@ namespace UniqueSDK
             CancellationToken cancellationToken = default
         )
         {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
             // If nonce is not provided, get a new one
             nonce ??= await substrateClient.System.AccountNextIndexAsync(account.Value, cancellationToken);
 
-            Response response = await TransferRestAsync(
+            var response = await TransferRestAsync(
                 account.Value,
                 destinationAddress,
                 amount,
                 nonce.Value,
+                network,
                 use,
                 withFee,
                 verify,

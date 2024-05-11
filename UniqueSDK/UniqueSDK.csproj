@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Substrate.NET.API" Version="0.9.20" />
+    <PackageReference Include="GraphQL.Client" Version="6.0.5" />
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="6.0.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Substrate.NetApiExt\Substrate.NetApiExt.csproj" />

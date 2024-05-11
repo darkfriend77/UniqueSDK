@@ -16,6 +16,9 @@ namespace UniqueSDKTests
         [SetUp]
         public async Task SetupAsync()
         {
+            // SdkConfig
+            SdkConfig.UseDefaultNetwork = NetworkEnum.Opal;
+
             // Account creation
             var mnemonics = "collect salad honey track clerk energy agent empty edit devote mixed injury";
 
@@ -36,7 +39,7 @@ namespace UniqueSDKTests
         [Test]
         public async Task GetAccountInfoFromAccountTestAsync()
         {
-            AccountInfo accountInfo = await client.GetAccountInfoAsync(account);
+            var accountInfo = await client.GetAccountInfoAsync(account);
 
             Assert.That(accountInfo.Nonce > 0);
 
@@ -46,7 +49,7 @@ namespace UniqueSDKTests
         [Test]
         public async Task GetAccountInfoFromAddressTestAsync()
         {
-            AccountInfo accountInfo = await client.GetAccountInfoAsync("5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y");
+            var accountInfo = await client.GetAccountInfoAsync("5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y");
 
             Assert.That(accountInfo.Nonce > 0);
 
@@ -56,7 +59,7 @@ namespace UniqueSDKTests
         [Test]
         public async Task TransferRestTestAsync()
         {
-            Response response = await BalancesModel.TransferRestAsync(
+            var response = await BalancesModel.TransferRestAsync(
                 account.Value,
                 "5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y",
                 (decimal)1.5,
@@ -70,7 +73,7 @@ namespace UniqueSDKTests
         {
             var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
 
-            Response response = await BalancesModel.TransferRestAsync(
+            var response = await BalancesModel.TransferRestAsync(
                 account.Value,
                 "5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y",
                 (decimal)1.5,
@@ -90,7 +93,7 @@ namespace UniqueSDKTests
         {
             var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
 
-            Response response = await BalancesModel.TransferRestAsync(
+            var response = await BalancesModel.TransferRestAsync(
                 account.Value,
                 "5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y",
                 10000000,
@@ -105,7 +108,9 @@ namespace UniqueSDKTests
         [Test]
         public async Task TransferSubmittedTestAsync()
         {
-            var result = await client.TransferExtrinsicAsync(
+            // Can be also used alternativelly like this :)
+            var result = await BalancesModel.SignAndSubmitTransferExtrinsicAsync(
+                client,
                 account,
                 "5EU6EyEq6RhqYed1gCYyQRVttdy6FC9yAtUUGzPe3gfpFX8y",
                 (decimal)1.5,

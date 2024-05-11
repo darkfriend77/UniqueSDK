@@ -1,4 +1,7 @@
-﻿using Substrate.NetApi;
+﻿using System.Xml.Linq;
+using GraphQL.Client.Http;
+using GraphQL.Client.Serializer.Newtonsoft;
+using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
@@ -10,13 +13,14 @@ using Substrate.NetApiExt.Generated.Model.up_data_structs;
 
 namespace UniqueSDK
 {
-    public class CollectionModel
+    public static class CollectionModel
     {
         /// <summary>
         /// https://rest.unique.network/opal/swagger#/collections/createCollectionMutationSchemaV2
         /// </summary>
         /// <param name="collection">Collection data</param>
         /// <param name="nonce">Nonce of the account</param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="use"></param>
         /// <param name="withFee"></param>
         /// <param name="verify"></param>
@@ -24,9 +28,10 @@ namespace UniqueSDK
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-		public static async Task<Response> CreateCollectionRestAsync(
-            Collection collection,
+		public static async Task<RestResponse> CreateCollectionRestAsync(
+            UniqueCollectionRest collection,
             uint nonce,
+            NetworkEnum? network = null,
             UseEnum use = UseEnum.Build,
             bool withFee = false,
             bool verify = false,
@@ -34,9 +39,12 @@ namespace UniqueSDK
             CancellationToken cancellationToken = default
         )
         {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
             string callback = callbackUrl is null ? "" : $"&callbackUrl={callbackUrl}"; // Handle string encoding
 
-            var url = $"{Constants.OPAL_REST_URL}/v1/collections/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
+            var url = $"{Constants.GetRestUrl(network)}/v1/collections/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
 
             return await RestModel.ExecutePostAsync(url, collection, cancellationToken);
         }
@@ -51,6 +59,7 @@ namespace UniqueSDK
         /// <param name="collection"></param>
         /// <param name="customCallback"></param>
         /// <param name="nonce"></param>
+        /// <param name="network">Network you want to use</param>
         /// <param name="use"></param>
         /// <param name="withFee"></param>
         /// <param name="verify"></param>
@@ -59,11 +68,12 @@ namespace UniqueSDK
         /// <param name="cancellationToken"></param>
         /// <returns>Collection Id of the newly created Collection</returns>
         public static async Task<uint?> SignAndSubmitCreateCollectionExtrinsicAsync(
-            SubstrateClientExt substrateClient,
+            this SubstrateClientExt substrateClient,
             Account account,
-            Collection collection,
+            UniqueCollectionRest collection,
             Action<string, ExtrinsicStatus>? customCallback = null,
             uint? nonce = null,
+            NetworkEnum? network = null,
             UseEnum use = UseEnum.Build,
             bool withFee = false,
             bool verify = false,
@@ -72,12 +82,16 @@ namespace UniqueSDK
             CancellationToken cancellationToken = default
         )
         {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
             // If nonce is not provided, get a new one
             nonce ??= await substrateClient.System.AccountNextIndexAsync(account.Value, cancellationToken);
 
-            Response response = await CollectionModel.CreateCollectionRestAsync(
+            var response = await CollectionModel.CreateCollectionRestAsync(
                 collection,
                 nonce.Value,
+                network,
                 use,
                 withFee,
                 verify,
@@ -85,8 +99,7 @@ namespace UniqueSDK
                 cancellationToken
             );
 
-            return await SignAndSubmitCreateCollectionExtrinsicAsync(
-                substrateClient,
+            return await substrateClient.SignAndSubmitCreateCollectionExtrinsicAsync(
                 account,
                 response,
                 customCallback,
@@ -108,9 +121,9 @@ namespace UniqueSDK
         /// <param name="cancellationToken"></param>
         /// <returns>Collection Id of the newly created Collection</returns>
         public static async Task<uint?> SignAndSubmitCreateCollectionExtrinsicAsync(
-            SubstrateClientExt substrateClient,
+            this SubstrateClientExt substrateClient,
             Account account,
-            Response response,
+            RestResponse response,
             Action<string, ExtrinsicStatus>? customCallback = null,
             bool signed = true,
             CancellationToken cancellationToken = default
@@ -191,6 +204,118 @@ namespace UniqueSDK
 
             // Return the resulting Collection Id
             return await collectionIdTask.Task;
+        }
+
+        /// <summary>
+        /// Returns collection by id.
+        /// </summary>
+        /// <param name="id">collection id</param>
+        /// <param name="network">Network you want to use</param>
+        /// <param name="token">cancellation token</param>
+        /// <returns>Collection or null if no collection was found</returns>
+        public static async Task<UniqueCollectionGraphQLEntity?> GetCollectionByIdAsync(
+            int id,
+            NetworkEnum? network = null,
+            CancellationToken token = default
+        )
+        {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
+            var client = new GraphQLHttpClient(
+                Constants.GetGraphQLUrl(network), new NewtonsoftJsonSerializer()
+            );
+
+            var filter = new { collection_id = new { _eq = id } };
+
+            var collections = await UniqueCollectionGraphQLService.GetCollectionEntitiesAsync(
+                client,
+                filter,
+                1,
+                0,
+                token
+            );
+
+            if (!collections.Any())
+            {
+                return null;
+            }
+
+            return collections[0];
+        }
+
+        /// <summary>
+        /// Returns list of collections filtered by name
+        /// </summary>
+        /// <param name="name">Full name</param>
+        /// <param name="limit">Max number of collections to query in the list.</param>
+        /// <param name="offset"></param>
+        /// <param name="network">Network you want to use</param>
+        /// <param name="token">Cancellation token</param>
+        /// <returns>List of collections</returns>
+        public static async Task<List<UniqueCollectionGraphQLEntity>> GetCollectionsByNameAsync(
+           string name,
+           int limit = 25,
+           int offset = 0,
+           NetworkEnum? network = null,
+           CancellationToken token = default
+        )
+        {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
+            var client = new GraphQLHttpClient(
+                Constants.GetGraphQLUrl(network), new NewtonsoftJsonSerializer()
+            );
+
+            var filter = new { name = new { _eq = name } };
+
+            var collections = await UniqueCollectionGraphQLService.GetCollectionEntitiesAsync(
+                client,
+                filter,
+                limit,
+                offset,
+                token
+            );
+
+            return collections;
+        }
+
+        /// <summary>
+        /// Returns list of collections filtered by owner
+        /// </summary>
+        /// <param name="ownerAddress">SS58 encoded address of the owner (in any format)</param>
+        /// <param name="limit">Max number of collections to query in the list.</param>
+        /// <param name="offset"></param>
+        /// <param name="network">Network you want to use</param>
+        /// <param name="token">Cancellation token</param>
+        /// <returns>List of collections</returns>
+        public static async Task<List<UniqueCollectionGraphQLEntity>> GetCollectionsByOwnerAsync(
+           string ownerAddress,
+           int limit = 25,
+           int offset = 0,
+           NetworkEnum? network = null,
+           CancellationToken token = default
+        )
+        {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
+            var client = new GraphQLHttpClient(
+                Constants.GetGraphQLUrl(network), new NewtonsoftJsonSerializer()
+            );
+
+            var filter = new { owner = new { _eq = Utils.GetAddressFrom(Utils.GetPublicKeyFrom(ownerAddress), Constants.GetSS58Prefix(network)) } };
+
+            var collections = await UniqueCollectionGraphQLService.GetCollectionEntitiesAsync(
+                client,
+                filter,
+                limit,
+                offset,
+                token
+            );
+
+            return collections;
         }
     }
 }
