@@ -47,7 +47,7 @@ namespace Substrate.NetApiExt.Generated.Model.fp_rpc
         /// <summary>
         /// >> logs
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.EthereumLog> Logs { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
