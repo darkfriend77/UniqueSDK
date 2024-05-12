@@ -124,6 +124,80 @@ uint? collectionId = await CollectionModel.SignAndSubmitCreateCollectionExtrinsi
 Console.WriteLine("Collection id: " + collectionId);
 ```
 
+# Mint NFT and get Fee details (Full example)
+
+```C#
+// Use existing mnemonics
+var mnemonics = "collect salad honey track clerk energy agent empty edit devote mixed injury";
+
+var keyring = new Keyring();
+
+var firstWallet = keyring.AddFromMnemonic(mnemonics, new Meta() { Name = "Test account" }, KeyType.Ed25519);
+
+// Your account that you can use
+var account = firstWallet.Account;
+
+// Connect to a Substrate node
+var client = new SubstrateClientExt(
+        new System.Uri(Constants.UNIQUE_NODE_URL),
+        ChargeTransactionPayment.Default());
+
+await client.ConnectAsync();
+
+// Get Account nonce
+var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
+
+// Nft data
+var nft = new Nft
+{
+    CollectionId = 2753,
+    Owner = account.Value, // Or any other string SS58 address
+    TokenName = "Unified",
+    ImageSource = "https://bafybeie5r4xjzjn3x6tl7anncjg62yhjzirpzucve4bwpfjhmblzsfpsuy.ipfs.nftstorage.link/",
+};
+
+// Get extrinsic details from REST api
+var response = await NftModel.MintNftRestAsync(
+    nft,
+    nonce,
+    withFee: true
+);
+
+// Show the Fee to the user
+Console.WriteLine($"Fee: {response.Fee.Amount} {response.Fee.Unit}");
+
+// Custom callback to react on the extrinsic status change
+Action<string, ExtrinsicStatus> myCallback = (string id, ExtrinsicStatus status) =>
+{
+    if (status.ExtrinsicState == ExtrinsicState.Ready)
+    {
+        Console.WriteLine("Ready");
+    }
+    else if (status.ExtrinsicState == ExtrinsicState.Dropped)
+    {
+        Console.WriteLine("Dropped");
+    }
+    else if (status.ExtrinsicState == ExtrinsicState.InBlock)
+    {
+        Console.WriteLine("In block");
+    }
+    else if (status.ExtrinsicState == ExtrinsicState.Finalized)
+    {
+        Console.WriteLine("Finalized");
+    }
+};
+
+// Sign and Submit the Mint Nft extrinsic
+uint? nftId = await client.SignAndSubmitMintNftExtrinsicAsync(account, response, myCallback);
+
+Assert.NotNull(nftId);
+
+newNftId = nftId.Value;
+
+// Your newly minted Nft id
+Console.WriteLine("Nft id: " + nftId);
+```
+
 # Query Collection data
 ```C#
 var collectionId = 2753;
