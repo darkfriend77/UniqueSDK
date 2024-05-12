@@ -43,7 +43,7 @@ namespace Substrate.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("EVM", "AccountStorages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.NetApiExt.Generated.Model.primitive_types.H256)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("EVM", "CurrentLogs"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereumlog.EthereumLog>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("EVM", "CurrentLogs"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.EthereumLog>)));
         }
         
         /// <summary>
@@ -157,10 +157,10 @@ namespace Substrate.NetApiExt.Generated.Storage
         ///  Written on log, reset after transaction
         ///  Should be empty between transactions
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereumlog.EthereumLog>> CurrentLogs(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.EthereumLog>> CurrentLogs(string blockhash, CancellationToken token)
         {
             string parameters = EVMStorage.CurrentLogsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereumlog.EthereumLog>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.EthereumLog>>(parameters, blockhash, token);
             return result;
         }
     }
