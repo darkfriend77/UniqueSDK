@@ -47,7 +47,7 @@ namespace Substrate.NetApiExt.Generated.Model.fp_rpc
         /// <summary>
         /// >> logs
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.ethereumlog.Log> Logs { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
@@ -87,7 +87,7 @@ namespace Substrate.NetApiExt.Generated.Model.fp_rpc
             To.Decode(byteArray, ref p);
             ContractAddress = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApiExt.Generated.Model.primitive_types.H160>();
             ContractAddress.Decode(byteArray, ref p);
-            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.Log>();
+            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.ethereumlog.Log>();
             Logs.Decode(byteArray, ref p);
             LogsBloom = new Substrate.NetApiExt.Generated.Model.ethbloom.Bloom();
             LogsBloom.Decode(byteArray, ref p);

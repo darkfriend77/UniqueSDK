@@ -39,7 +39,7 @@ namespace Substrate.NetApiExt.Generated.Model.ethereum.receipt
         /// <summary>
         /// >> logs
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.ethereumlog.Log> Logs { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -68,7 +68,7 @@ namespace Substrate.NetApiExt.Generated.Model.ethereum.receipt
             UsedGas.Decode(byteArray, ref p);
             LogsBloom = new Substrate.NetApiExt.Generated.Model.ethbloom.Bloom();
             LogsBloom.Decode(byteArray, ref p);
-            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.Log>();
+            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.ethereumlog.Log>();
             Logs.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
