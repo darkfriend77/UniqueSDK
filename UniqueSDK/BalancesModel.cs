@@ -131,6 +131,7 @@ namespace UniqueSDK
         /// <param name="verify"></param>
         /// <param name="callbackUrl"></param>
         /// <param name="cancellationToken"></param>
+        /// <param name="finalityTimeout">The maximum amount of time to wait for the finality. Defaultly wait maximum 60 seconds.</param>
         /// <returns>Status of the submitted extrinsic</returns>
         public static async Task<ExtrinsicResult> SignAndSubmitTransferExtrinsicAsync(
             this SubstrateClientExt substrateClient,
@@ -145,6 +146,7 @@ namespace UniqueSDK
             bool withFee = false,
             bool verify = false,
             string? callbackUrl = null,
+            int finalityTimeout = 60_000,
             CancellationToken cancellationToken = default
         )
         {
@@ -171,6 +173,7 @@ namespace UniqueSDK
                 await response.SignerPayloadJSON.ToExtrinsicAsync(account),
                 waitForFinality,
                 customCallback,
+                finalityTimeout,
                 cancellationToken
             );
         }

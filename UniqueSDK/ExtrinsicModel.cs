@@ -16,6 +16,7 @@ namespace UniqueSDK
         /// <param name="unCheckedExtrinsic"></param>
         /// <param name="waitForFinality">Set to false, if you do not want to await until the Finality is confirmed</param>
         /// <param name="customCallback"></param>
+        /// <param name="finalityTimeout">The maximum amount of time to wait for the finality. Defaultly wait maximum 60 seconds.</param>
         /// <param name="cancellationToken"></param>
         /// <returns>Status of the submitted extrinsic</returns>
         public static async Task<ExtrinsicResult> SignAndSubmitExtrinsicAsync(
@@ -23,6 +24,7 @@ namespace UniqueSDK
             UnCheckedExtrinsic unCheckedExtrinsic,
             bool waitForFinality = true,
             Action<string, ExtrinsicStatus>? customCallback = null,
+            int finalityTimeout = 60_000,
             CancellationToken cancellationToken = default
         )
         {
@@ -107,8 +109,7 @@ namespace UniqueSDK
                 cancellationToken
             );
 
-            // 60 seconds timeout
-            var timeoutTask = Task.Delay(60_000, cancellationToken);
+            var timeoutTask = Task.Delay(finalityTimeout, cancellationToken);
 
             if (await Task.WhenAny(collectionIdTask.Task, timeoutTask) == timeoutTask)
             {

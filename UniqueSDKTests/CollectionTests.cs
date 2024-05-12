@@ -164,12 +164,6 @@ public class CollectionTests
         var collection = await CollectionModel.GetCollectionByIdAsync(collectionId);
 
         Assert.NotNull(collection);
-
-        Console.WriteLine(JsonConvert.SerializeObject(collection));
-
-        var newCollection = JsonConvert.DeserializeObject<Collection>(JsonConvert.SerializeObject(collection));
-
-        Console.WriteLine(JsonConvert.SerializeObject(newCollection));
     }
 
     [Test]

@@ -104,13 +104,13 @@ namespace UniqueSDK
         public int Order { get; set; }
 
         [JsonPropertyName("duration")]
-        public int Duration { get; set; }
+        public int? Duration { get; set; }
 
         [JsonPropertyName("codecs")]
         public List<string> Codecs { get; set; }
 
         [JsonPropertyName("loop")]
-        public bool Loop { get; set; }
+        public bool? Loop { get; set; }
     }
 
     public class Thumbnail : ImageDetails

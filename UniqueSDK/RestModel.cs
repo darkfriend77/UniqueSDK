@@ -31,6 +31,10 @@ namespace UniqueSDK
                 }
             );
 
+            Console.WriteLine("json: ");
+
+            Console.WriteLine(json);
+
             var content = new StringContent(
                 json,
                 Encoding.UTF8,

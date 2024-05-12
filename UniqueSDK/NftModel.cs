@@ -1,5 +1,4 @@
-﻿using System.Xml.Linq;
-using GraphQL.Client.Http;
+﻿using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.Newtonsoft;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
@@ -13,12 +12,12 @@ using Substrate.NetApiExt.Generated.Model.up_data_structs;
 
 namespace UniqueSDK
 {
-    public static class CollectionModel
-    {
+	public static class NftModel
+	{
         /// <summary>
-        /// https://rest.unique.network/opal/swagger#/collections/createCollectionMutationSchemaV2
+        /// https://rest.unique.network/opal/swagger#/tokens/createNewTokenV2Mutation
         /// </summary>
-        /// <param name="collection">Collection data</param>
+        /// <param name="nft">Nft data</param>
         /// <param name="nonce">Nonce of the account</param>
         /// <param name="network">Network you want to use</param>
         /// <param name="use"></param>
@@ -28,8 +27,8 @@ namespace UniqueSDK
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-		public static async Task<RestResponse> CreateCollectionRestAsync(
-            UniqueCollectionRest collection,
+        public static async Task<RestResponse> MintNftRestAsync(
+            UniqueNftRest nft,
             uint nonce,
             NetworkEnum? network = null,
             UseEnum use = UseEnum.Build,
@@ -44,19 +43,19 @@ namespace UniqueSDK
 
             string callback = callbackUrl is null ? "" : $"&callbackUrl={callbackUrl}"; // Handle string encoding
 
-            var url = $"{Constants.GetRestUrl(network)}/v1/collections/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
+            var url = $"{Constants.GetRestUrl(network)}/v1/tokens/v2?use={use}&withFee={withFee}&verify={verify}&nonce={nonce}{callback}";
 
-            return await RestModel.ExecutePostAsync(url, collection, cancellationToken);
+            return await RestModel.ExecutePostAsync(url, nft, cancellationToken);
         }
 
         /// <summary>
-        /// Constructs the Unique.createCollectionEx extrinsic, signs it, submits it to the chain,
-        /// listens to on-chain events and filters the events for Common.CollectionCreated
-        /// to get the CollectionId of the newly created Collection.
+        /// Constructs the Unique.createItem extrinsic, signs it, submits it to the chain,
+        /// listens to on-chain events and filters the events for Common.ItemCreated
+        /// to get the TokenId of the newly created Token.
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="account"></param>
-        /// <param name="collection"></param>
+        /// <param name="nft">Nft data</param>
         /// <param name="customCallback"></param>
         /// <param name="nonce"></param>
         /// <param name="network">Network you want to use</param>
@@ -67,11 +66,11 @@ namespace UniqueSDK
         /// <param name="signed"></param>
         /// <param name="finalityTimeout">The maximum amount of time to wait for the finality. Defaultly wait maximum 60 seconds.</param> 
         /// <param name="cancellationToken"></param>
-        /// <returns>Collection Id of the newly created Collection</returns>
-        public static async Task<uint?> SignAndSubmitCreateCollectionExtrinsicAsync(
+        /// <returns>Token Id of the newly created Token</returns>
+        public static async Task<uint?> SignAndSubmitMintNftExtrinsicAsync(
             this SubstrateClientExt substrateClient,
             Account account,
-            UniqueCollectionRest collection,
+            UniqueNftRest nft,
             Action<string, ExtrinsicStatus>? customCallback = null,
             uint? nonce = null,
             NetworkEnum? network = null,
@@ -90,8 +89,8 @@ namespace UniqueSDK
             // If nonce is not provided, get a new one
             nonce ??= await substrateClient.System.AccountNextIndexAsync(account.Value, cancellationToken);
 
-            var response = await CollectionModel.CreateCollectionRestAsync(
-                collection,
+            var response = await NftModel.MintNftRestAsync(
+                nft,
                 nonce.Value,
                 network,
                 use,
@@ -101,7 +100,7 @@ namespace UniqueSDK
                 cancellationToken
             );
 
-            return await substrateClient.SignAndSubmitCreateCollectionExtrinsicAsync(
+            return await substrateClient.SignAndSubmitMintNftExtrinsicAsync(
                 account,
                 response,
                 customCallback,
@@ -112,9 +111,9 @@ namespace UniqueSDK
         }
 
         /// <summary>
-        /// Constructs the Unique.createCollectionEx extrinsic, signs it, submits it to the chain,
-        /// listens to on-chain events and filters the events for Common.CollectionCreated
-        /// to get the CollectionId of the newly created Collection.
+        /// Constructs the Unique.createItem extrinsic, signs it, submits it to the chain,
+        /// listens to on-chain events and filters the events for Common.ItemCreated
+        /// to get the TokenId of the newly created Token.
         /// </summary>
         /// <param name="substrateClient"></param>
         /// <param name="account"></param>
@@ -123,8 +122,8 @@ namespace UniqueSDK
         /// <param name="signed"></param>
         /// <param name="finalityTimeout">The maximum amount of time to wait for the finality. Defaultly wait maximum 60 seconds.</param>
         /// <param name="cancellationToken"></param>
-        /// <returns>Collection Id of the newly created Collection</returns>
-        public static async Task<uint?> SignAndSubmitCreateCollectionExtrinsicAsync(
+        /// <returns>Token Id of the newly created Token</returns>
+        public static async Task<uint?> SignAndSubmitMintNftExtrinsicAsync(
             this SubstrateClientExt substrateClient,
             Account account,
             RestResponse response,
@@ -136,7 +135,7 @@ namespace UniqueSDK
         {
             UnCheckedExtrinsic unCheckedExtrinsic = await response.SignerPayloadJSON.ToExtrinsicAsync(account, signed);
 
-            var collectionIdTask = new TaskCompletionSource<uint?>();
+            var tokenIdTask = new TaskCompletionSource<uint?>();
 
 #pragma warning disable VSTHRD101 // Avoid unsupported async delegates
             Action<string, ExtrinsicStatus> callback = async (string id, ExtrinsicStatus status) =>
@@ -150,7 +149,7 @@ namespace UniqueSDK
                     case ExtrinsicState.Dropped:
                     case ExtrinsicState.Invalid:
                     case ExtrinsicState.Usurped:
-                        collectionIdTask.TrySetResult(null);
+                        tokenIdTask.TrySetResult(null);
                         break;
 
                     case ExtrinsicState.Finalized:
@@ -163,7 +162,7 @@ namespace UniqueSDK
                         }
                         catch
                         {
-                            collectionIdTask.TrySetResult(null);
+                            tokenIdTask.TrySetResult(null);
 
                             return;
                         }
@@ -175,11 +174,11 @@ namespace UniqueSDK
                             {
                                 var commonEvent = (Substrate.NetApiExt.Generated.Model.pallet_common.pallet.EnumEvent)e.Event.Value2;
 
-                                if (commonEvent.Value == Substrate.NetApiExt.Generated.Model.pallet_common.pallet.Event.CollectionCreated)
+                                if (commonEvent.Value == Substrate.NetApiExt.Generated.Model.pallet_common.pallet.Event.ItemCreated)
                                 {
-                                    var createdCollectionEvent = (BaseTuple<CollectionId, U8, Substrate.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>)commonEvent.Value2;
+                                    var createdItemEvent = (BaseTuple<CollectionId, TokenId, Substrate.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, U128>)commonEvent.Value2;
 
-                                    collectionIdTask.TrySetResult(((CollectionId)createdCollectionEvent.Value[0]).Value);
+                                    tokenIdTask.TrySetResult(((TokenId)createdItemEvent.Value[1]).Value);
 
                                     return;
                                 }
@@ -200,25 +199,27 @@ namespace UniqueSDK
 
             var timeoutTask = Task.Delay(finalityTimeout, cancellationToken);
 
-            if (await Task.WhenAny(collectionIdTask.Task, timeoutTask) == timeoutTask)
+            if (await Task.WhenAny(tokenIdTask.Task, timeoutTask) == timeoutTask)
             {
                 // If timeouted, set the result to null
-                collectionIdTask.TrySetResult(null);
+                tokenIdTask.TrySetResult(null);
             }
 
-            // Return the resulting Collection Id
-            return await collectionIdTask.Task;
+            // Return the resulting Token Id
+            return await tokenIdTask.Task;
         }
 
         /// <summary>
-        /// Returns collection by id.
+        /// Returns nft with the same Collection ID and NFT ID.
         /// </summary>
-        /// <param name="id">collection id</param>
+        /// <param name="collectionId"></param>
+        /// <param name="nftId"></param>
         /// <param name="network">Network you want to use</param>
         /// <param name="token">cancellation token</param>
-        /// <returns>Collection or null if no collection was found</returns>
-        public static async Task<UniqueCollectionGraphQLEntity?> GetCollectionByIdAsync(
-            int id,
+        /// <returns>Nft or null if no nft with the corresponding ids was found</returns>
+        public static async Task<UniqueNftGraphQLEntity?> GetNftByIdAsync(
+            int collectionId,
+            int nftId,
             NetworkEnum? network = null,
             CancellationToken token = default
         )
@@ -230,9 +231,9 @@ namespace UniqueSDK
                 Constants.GetGraphQLUrl(network), new NewtonsoftJsonSerializer()
             );
 
-            var filter = new { collection_id = new { _eq = id } };
+            var filter = new { token_id = new { _eq = nftId }, collection_id = new { _eq = collectionId} };
 
-            var collections = await UniqueCollectionGraphQLService.GetCollectionEntitiesAsync(
+            var nfts = await UniqueNftGraphQLService.GetNftEntitiesAsync(
                 client,
                 filter,
                 1,
@@ -240,29 +241,29 @@ namespace UniqueSDK
                 token
             );
 
-            if (!collections.Any())
+            if (!nfts.Any())
             {
                 return null;
             }
 
-            return collections[0];
+            return nfts[0];
         }
 
         /// <summary>
-        /// Returns list of collections filtered by name
+        /// Returns list of nfts with the same Collection ID
         /// </summary>
-        /// <param name="name">Full name</param>
-        /// <param name="limit">Max number of collections to query in the list.</param>
+        /// <param name="collectionId"></param>
+        /// <param name="limit">Max number of nfts to query in the list.</param>
         /// <param name="offset"></param>
         /// <param name="network">Network you want to use</param>
-        /// <param name="token">Cancellation token</param>
-        /// <returns>List of collections</returns>
-        public static async Task<List<UniqueCollectionGraphQLEntity>> GetCollectionsByNameAsync(
-           string name,
-           int limit = 25,
-           int offset = 0,
-           NetworkEnum? network = null,
-           CancellationToken token = default
+        /// <param name="token">cancellation token</param>
+        /// <returns>List of nfts</returns>
+        public static async Task<List<UniqueNftGraphQLEntity>> GetNftListByCollectionIdAsync(
+            int collectionId,
+            int limit = 25,
+            int offset = 0,
+            NetworkEnum? network = null,
+            CancellationToken token = default
         )
         {
             // If network is not provided, use the default one
@@ -272,9 +273,9 @@ namespace UniqueSDK
                 Constants.GetGraphQLUrl(network), new NewtonsoftJsonSerializer()
             );
 
-            var filter = new { name = new { _eq = name } };
+            var filter = new { collection_id = new { _eq = collectionId } };
 
-            var collections = await UniqueCollectionGraphQLService.GetCollectionEntitiesAsync(
+            var nfts = await UniqueNftGraphQLService.GetNftEntitiesAsync(
                 client,
                 filter,
                 limit,
@@ -282,24 +283,61 @@ namespace UniqueSDK
                 token
             );
 
-            return collections;
+            return nfts;
         }
 
         /// <summary>
-        /// Returns list of collections filtered by owner
+        /// Returns list of nfts filtered by collection name
         /// </summary>
-        /// <param name="ownerAddress">SS58 encoded address of the owner (in any format)</param>
-        /// <param name="limit">Max number of collections to query in the list.</param>
+        /// <param name="collectionName"></param>
+        /// <param name="limit">Max number of nfts to query in the list.</param>
         /// <param name="offset"></param>
         /// <param name="network">Network you want to use</param>
-        /// <param name="token">Cancellation token</param>
-        /// <returns>List of collections</returns>
-        public static async Task<List<UniqueCollectionGraphQLEntity>> GetCollectionsByOwnerAsync(
-           string ownerAddress,
-           int limit = 25,
-           int offset = 0,
-           NetworkEnum? network = null,
-           CancellationToken token = default
+        /// <param name="token">cancellation token</param>
+        /// <returns>List of nfts</returns>
+        public static async Task<List<UniqueNftGraphQLEntity>> GetNftListByCollectionNameAsync(
+            string collectionName,
+            int limit = 25,
+            int offset = 0,
+            NetworkEnum? network = null,
+            CancellationToken token = default
+        )
+        {
+            // If network is not provided, use the default one
+            network ??= SdkConfig.UseDefaultNetwork;
+
+            var client = new GraphQLHttpClient(
+                Constants.GetGraphQLUrl(network), new NewtonsoftJsonSerializer()
+            );
+
+            var filter = new { collection_name = new { _eq = collectionName } };
+
+            var nfts = await UniqueNftGraphQLService.GetNftEntitiesAsync(
+                client,
+                filter,
+                limit,
+                offset,
+                token
+            );
+
+            return nfts;
+        }
+
+        /// <summary>
+        /// Returns list of nfts filtered by owner
+        /// </summary>
+        /// <param name="ownerAddress">SS58 encoded address of the owner (in any format)</param>
+        /// <param name="limit">Max number of nfts to query in the list.</param>
+        /// <param name="offset"></param>
+        /// <param name="network">Network you want to use</param>
+        /// <param name="token">cancellation token</param>
+        /// <returns>List of nfts</returns>
+        public static async Task<List<UniqueNftGraphQLEntity>> GetNftListByOwnerAsync(
+            string ownerAddress,
+            int limit = 25,
+            int offset = 0,
+            NetworkEnum? network = null,
+            CancellationToken token = default
         )
         {
             // If network is not provided, use the default one
@@ -311,7 +349,7 @@ namespace UniqueSDK
 
             var filter = new { owner = new { _eq = Utils.GetAddressFrom(Utils.GetPublicKeyFrom(ownerAddress), Constants.GetSS58Prefix(network)) } };
 
-            var collections = await UniqueCollectionGraphQLService.GetCollectionEntitiesAsync(
+            var nfts = await UniqueNftGraphQLService.GetNftEntitiesAsync(
                 client,
                 filter,
                 limit,
@@ -319,7 +357,7 @@ namespace UniqueSDK
                 token
             );
 
-            return collections;
+            return nfts;
         }
     }
 }
