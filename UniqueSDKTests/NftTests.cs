@@ -14,6 +14,8 @@ public class NftTests
 
     private SubstrateClientExt client;
 
+    private uint newNftId;
+
     [SetUp]
     public async Task SetupAsync()
     {
@@ -77,6 +79,10 @@ public class NftTests
     [Test]
     public async Task SignAndSubmitMintNftWithFeeTestAsync()
     {
+        // Get Account nonce
+        var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
+
+        // Nft data
         var nft = new Nft
         {
             CollectionId = 2753,
@@ -85,16 +91,17 @@ public class NftTests
             ImageSource = "https://bafybeie5r4xjzjn3x6tl7anncjg62yhjzirpzucve4bwpfjhmblzsfpsuy.ipfs.nftstorage.link/",
         };
 
-        var nonce = await client.System.AccountNextIndexAsync(account.Value, CancellationToken.None);
-
+        // Get extrinsic details from REST api
         var response = await NftModel.MintNftRestAsync(
             nft,
             nonce,
             withFee: true
         );
 
+        // Show the Fee to the user
         Console.WriteLine($"Fee: {response.Fee.Amount} {response.Fee.Unit}");
 
+        // Custom callback to react on the extrinsic status change
         Action<string, ExtrinsicStatus> myCallback = (string id, ExtrinsicStatus status) =>
         {
             if (status.ExtrinsicState == ExtrinsicState.Ready)
@@ -115,8 +122,54 @@ public class NftTests
             }
         };
 
+        // Sign and Submit the Mint Nft extrinsic
         uint? nftId = await client.SignAndSubmitMintNftExtrinsicAsync(account, response, myCallback);
 
+        Assert.NotNull(nftId);
+
+        newNftId = nftId.Value;
+
+        // Your newly minted Nft id
+        Console.WriteLine("Nft id: " + nftId);
+    }
+
+    [Test]
+    public async Task SignAndSubmitMintNftTestAsync()
+    {
+        // Nft data
+        var nft = new Nft
+        {
+            CollectionId = 2753,
+            Owner = account.Value, // Or any other string SS58 address
+            TokenName = "Unified 2",
+            ImageSource = "https://bafybeie5r4xjzjn3x6tl7anncjg62yhjzirpzucve4bwpfjhmblzsfpsuy.ipfs.nftstorage.link/",
+        };
+
+        // Custom callback to react on the extrinsic status change
+        Action<string, ExtrinsicStatus> myCallback = (string id, ExtrinsicStatus status) =>
+        {
+            if (status.ExtrinsicState == ExtrinsicState.Ready)
+            {
+                Console.WriteLine("Ready");
+            }
+            else if (status.ExtrinsicState == ExtrinsicState.Dropped)
+            {
+                Console.WriteLine("Dropped");
+            }
+            else if (status.ExtrinsicState == ExtrinsicState.InBlock)
+            {
+                Console.WriteLine("In block");
+            }
+            else if (status.ExtrinsicState == ExtrinsicState.Finalized)
+            {
+                Console.WriteLine("Finalized");
+            }
+        };
+
+        // Sign and Submit the Mint Nft extrinsic
+        uint? nftId = await client.SignAndSubmitMintNftExtrinsicAsync(account, nft, myCallback);
+
+        // Your newly minted Nft id
         Console.WriteLine("Nft id: " + nftId);
     }
 
