@@ -115,7 +115,7 @@ namespace Substrate.NetApiExt.Generated.Storage
         /// >> insert_eth_logs
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method InsertEthLogs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.Log> logs)
+        public static Method InsertEthLogs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApiExt.Generated.Model.ethereum.log.EthereumLog> logs)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(logs.Encode());
