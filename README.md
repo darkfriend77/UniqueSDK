@@ -1,3 +1,8 @@
+# Unique C# SDK
+Simple to use nuget package (standard for C# packages) that abstracts the use of simple NFT operations (minting, transferring, querying..).
+
+The ideal goal of this abstraction is to make it understandable to non-web3 developers.
+
 # Create a new account
 ```C#
 // Generate new mnemonics
