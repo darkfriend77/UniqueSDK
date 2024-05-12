@@ -1,21 +1,44 @@
-# Setup
+# Create a new account
 ```C#
-// Account creation
+// Generate new mnemonics
+var mnemonics = Mnemonic.GenerateMnemonic(MnemonicSize.Words12);
+
+// Show these mnemonics to the user.
+// Careful, mnemonics are private data, which should never be leaked.
+Console.WriteLine(mnemonics);
+
+var keyring = new Keyring();
+
+var firstWallet = keyring.AddFromMnemonic(mnemonics, new Meta() { Name = "Test account" }, KeyType.Ed25519);
+
+// Your account that you can use
+var account = firstWallet.Account;
+```
+
+# Use existing account
+```C#
+// Use existing mnemonics
 var mnemonics = "collect salad honey track clerk energy agent empty edit devote mixed injury";
 
 var keyring = new Keyring();
 
 var firstWallet = keyring.AddFromMnemonic(mnemonics, new Meta() { Name = "Test account" }, KeyType.Ed25519);
 
+// Your account that you can use
 var account = firstWallet.Account;
+```
 
-// Substrate client
+# Connect to a Substrate node
+```C#
+// Connect to a Substrate node
 var client = new SubstrateClientExt(
-        new System.Uri(Constants.OPAL_NODE_URL),
+        new System.Uri(Constants.UNIQUE_NODE_URL),
         ChargeTransactionPayment.Default());
 
 await client.ConnectAsync();
 ```
+
+- Feel free to change the `Constants.UNIQUE_NODE_URL` for any other websocket node URL.
 
 # Query Free Balance Example
 ```C#
