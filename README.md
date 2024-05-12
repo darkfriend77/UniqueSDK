@@ -123,3 +123,22 @@ uint? collectionId = await CollectionModel.SignAndSubmitCreateCollectionExtrinsi
 
 Console.WriteLine("Collection id: " + collectionId);
 ```
+
+# Query Collection data
+```C#
+var collectionId = 2753;
+
+var collection = await CollectionModel.GetCollectionByIdAsync(collectionId);
+```
+
+```C#
+var collectionName = "C# is BEST";
+
+var collections = await CollectionModel.GetCollectionsByNameAsync(collectionName, limit: 2);
+```
+
+```C#
+var owner = account.Value;
+
+var collections = await CollectionModel.GetCollectionsByOwnerAsync(owner);
+```
