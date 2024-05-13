@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "net_api": "Opal.NetApiExt",
+    "net_integration": "Opal.Integration",
+    "rest_service": "Opal.RestService",
+    "rest_client": "Opal.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://ws-opal.unique.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Opal.RestService.dll"
+  }
+}

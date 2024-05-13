@@ -1,6 +1,6 @@
 ﻿using Substrate.NetApi;
 using Substrate.NetApi.Model.Types;
-using Substrate.NetApiExt.Generated.Model.sp_core.crypto;
+using Opal.NetApiExt.Generated.Model.sp_core.crypto;
 
 namespace UniqueSDK
 {

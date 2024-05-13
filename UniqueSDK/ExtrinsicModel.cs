@@ -1,8 +1,8 @@
 ﻿using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Rpc;
-using Substrate.NetApiExt.Generated;
-using Substrate.NetApiExt.Generated.Model.frame_system;
+using Opal.NetApiExt.Generated;
+using Opal.NetApiExt.Generated.Model.frame_system;
 
 namespace UniqueSDK
 {
@@ -75,17 +75,17 @@ namespace UniqueSDK
                         foreach (var e in allExtrinsicEvents)
                         {
                             // Filter only Common.CollectionCreated events
-                            if (e.Event.Value == Substrate.NetApiExt.Generated.Model.opal_runtime.RuntimeEvent.System)
+                            if (e.Event.Value == Opal.NetApiExt.Generated.Model.opal_runtime.RuntimeEvent.System)
                             {
-                                var commonEvent = (Substrate.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent)e.Event.Value2;
+                                var commonEvent = (Opal.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent)e.Event.Value2;
 
-                                if (commonEvent.Value == Substrate.NetApiExt.Generated.Model.frame_system.pallet.Event.ExtrinsicSuccess)
+                                if (commonEvent.Value == Opal.NetApiExt.Generated.Model.frame_system.pallet.Event.ExtrinsicSuccess)
                                 {
                                     collectionIdTask.TrySetResult(ExtrinsicResult.Success);
 
                                     return;
                                 }
-                                else if (commonEvent.Value == Substrate.NetApiExt.Generated.Model.frame_system.pallet.Event.ExtrinsicFailed)
+                                else if (commonEvent.Value == Opal.NetApiExt.Generated.Model.frame_system.pallet.Event.ExtrinsicFailed)
                                 {
                                     collectionIdTask.TrySetResult(ExtrinsicResult.Failed);
 

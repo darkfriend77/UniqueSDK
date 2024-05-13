@@ -17,10 +17,9 @@
     <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="6.0.5" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Substrate.NetApiExt\Substrate.NetApiExt.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Opal.NetApiExt\Opal.NetApiExt.csproj" />
   </ItemGroup>
 </Project>

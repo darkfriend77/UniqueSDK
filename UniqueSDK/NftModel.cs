@@ -6,9 +6,9 @@ using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
 using Substrate.NetApi.Model.Types.Base;
 using Substrate.NetApi.Model.Types.Primitive;
-using Substrate.NetApiExt.Generated;
-using Substrate.NetApiExt.Generated.Model.frame_system;
-using Substrate.NetApiExt.Generated.Model.up_data_structs;
+using Opal.NetApiExt.Generated;
+using Opal.NetApiExt.Generated.Model.frame_system;
+using Opal.NetApiExt.Generated.Model.up_data_structs;
 
 namespace UniqueSDK
 {
@@ -170,13 +170,13 @@ namespace UniqueSDK
                         foreach (var e in allExtrinsicEvents)
                         {
                             // Filter only Common.CollectionCreated events
-                            if (e.Event.Value == Substrate.NetApiExt.Generated.Model.opal_runtime.RuntimeEvent.Common)
+                            if (e.Event.Value == Opal.NetApiExt.Generated.Model.opal_runtime.RuntimeEvent.Common)
                             {
-                                var commonEvent = (Substrate.NetApiExt.Generated.Model.pallet_common.pallet.EnumEvent)e.Event.Value2;
+                                var commonEvent = (Opal.NetApiExt.Generated.Model.pallet_common.pallet.EnumEvent)e.Event.Value2;
 
-                                if (commonEvent.Value == Substrate.NetApiExt.Generated.Model.pallet_common.pallet.Event.ItemCreated)
+                                if (commonEvent.Value == Opal.NetApiExt.Generated.Model.pallet_common.pallet.Event.ItemCreated)
                                 {
-                                    var createdItemEvent = (BaseTuple<CollectionId, TokenId, Substrate.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, U128>)commonEvent.Value2;
+                                    var createdItemEvent = (BaseTuple<CollectionId, TokenId, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, U128>)commonEvent.Value2;
 
                                     tokenIdTask.TrySetResult(((TokenId)createdItemEvent.Value[1]).Value);
 

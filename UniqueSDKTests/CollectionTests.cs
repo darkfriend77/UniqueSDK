@@ -2,7 +2,7 @@
 using Substrate.NetApi.Model.Types;
 using UniqueSDK;
 using Substrate.NetApi.Model.Rpc;
-using Substrate.NetApiExt.Generated;
+using Opal.NetApiExt.Generated;
 using Substrate.NetApi.Model.Extrinsics;
 using Newtonsoft.Json;
 
