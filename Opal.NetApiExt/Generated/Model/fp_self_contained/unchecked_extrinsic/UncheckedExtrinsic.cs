@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.fp_self_contained.unchecked_extrinsic
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.fp_self_contained.unchecked_extrinsic
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.fp_self_contained.unchecked_extrinsic
         /// <summary>
         /// >> value
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic Value { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.fp_self_contained.unchecked_extrinsic
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Opal.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic();
+            Value = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

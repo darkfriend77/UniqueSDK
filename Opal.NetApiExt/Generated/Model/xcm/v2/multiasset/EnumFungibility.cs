@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v2.multiasset
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v2.multiasset
     /// <summary>
     /// >> 139 - Variant[xcm.v2.multiasset.Fungibility]
     /// </summary>
-    public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Opal.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetInstance>
+    public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetInstance>
     {
     }
 }

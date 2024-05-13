@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.polkadot_core_primitives
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_core_primitives
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.polkadot_core_primitives
         /// <summary>
         /// >> recipient
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> data
         /// </summary>
@@ -52,7 +52,7 @@ namespace Opal.NetApiExt.Generated.Model.polkadot_core_primitives
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Recipient = new Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
+            Recipient = new Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Recipient.Decode(byteArray, ref p);
             Data = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Data.Decode(byteArray, ref p);

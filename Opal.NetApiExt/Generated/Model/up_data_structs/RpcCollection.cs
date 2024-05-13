@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -27,11 +27,11 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> owner
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> mode
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode { get; set; }
         /// <summary>
         /// >> name
         /// </summary>
@@ -47,23 +47,23 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> sponsorship
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState Sponsorship { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState Sponsorship { get; set; }
         /// <summary>
         /// >> limits
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits Limits { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits Limits { get; set; }
         /// <summary>
         /// >> permissions
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions Permissions { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions Permissions { get; set; }
         /// <summary>
         /// >> token_property_permissions
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> TokenPropertyPermissions { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> TokenPropertyPermissions { get; set; }
         /// <summary>
         /// >> properties
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.Property> Properties { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.Property> Properties { get; set; }
         /// <summary>
         /// >> read_only
         /// </summary>
@@ -71,7 +71,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> flags
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags Flags { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags Flags { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -102,9 +102,9 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Owner = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Owner = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Owner.Decode(byteArray, ref p);
-            Mode = new Opal.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode();
+            Mode = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode();
             Mode.Decode(byteArray, ref p);
             Name = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16>();
             Name.Decode(byteArray, ref p);
@@ -112,19 +112,19 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
             Description.Decode(byteArray, ref p);
             TokenPrefix = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             TokenPrefix.Decode(byteArray, ref p);
-            Sponsorship = new Opal.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState();
+            Sponsorship = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState();
             Sponsorship.Decode(byteArray, ref p);
-            Limits = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
+            Limits = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
             Limits.Decode(byteArray, ref p);
-            Permissions = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions();
+            Permissions = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions();
             Permissions.Decode(byteArray, ref p);
-            TokenPropertyPermissions = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission>();
+            TokenPropertyPermissions = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission>();
             TokenPropertyPermissions.Decode(byteArray, ref p);
-            Properties = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.Property>();
+            Properties = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.Property>();
             Properties.Decode(byteArray, ref p);
             ReadOnly = new Substrate.NetApi.Model.Types.Primitive.Bool();
             ReadOnly.Decode(byteArray, ref p);
-            Flags = new Opal.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags();
+            Flags = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags();
             Flags.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

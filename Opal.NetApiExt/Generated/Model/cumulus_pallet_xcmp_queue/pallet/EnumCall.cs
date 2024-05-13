@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet
 {
     
     
@@ -81,7 +81,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet
     /// >> 221 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
     {
     }
 }

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> destination
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation Destination { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation Destination { get; set; }
         /// <summary>
         /// >> query_id
         /// </summary>
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> max_weight
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxWeight { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxWeight { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Destination = new Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+            Destination = new Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
             Destination.Decode(byteArray, ref p);
             QueryId = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
             QueryId.Decode(byteArray, ref p);
-            MaxWeight = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            MaxWeight = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             MaxWeight.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

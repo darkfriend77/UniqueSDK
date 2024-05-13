@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_template_transaction_payment
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_template_transaction_payment
 {
     
     

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
 {
     
     
@@ -39,15 +39,15 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
         /// <summary>
         /// >> threshold_weight
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight ThresholdWeight { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight ThresholdWeight { get; set; }
         /// <summary>
         /// >> weight_restrict_decay
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight WeightRestrictDecay { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight WeightRestrictDecay { get; set; }
         /// <summary>
         /// >> xcmp_max_individual_weight
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight XcmpMaxIndividualWeight { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight XcmpMaxIndividualWeight { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -78,11 +78,11 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
             DropThreshold.Decode(byteArray, ref p);
             ResumeThreshold = new Substrate.NetApi.Model.Types.Primitive.U32();
             ResumeThreshold.Decode(byteArray, ref p);
-            ThresholdWeight = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            ThresholdWeight = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             ThresholdWeight.Decode(byteArray, ref p);
-            WeightRestrictDecay = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            WeightRestrictDecay = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             WeightRestrictDecay.Decode(byteArray, ref p);
-            XcmpMaxIndividualWeight = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            XcmpMaxIndividualWeight = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             XcmpMaxIndividualWeight.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

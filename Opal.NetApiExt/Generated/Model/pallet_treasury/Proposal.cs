@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_treasury
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_treasury
         /// <summary>
         /// >> proposer
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Proposer { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Proposer { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_treasury
         /// <summary>
         /// >> beneficiary
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Beneficiary { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Beneficiary { get; set; }
         /// <summary>
         /// >> bond
         /// </summary>
@@ -62,11 +62,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_treasury
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Proposer = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Proposer = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Proposer.Decode(byteArray, ref p);
             Value = new Substrate.NetApi.Model.Types.Primitive.U128();
             Value.Decode(byteArray, ref p);
-            Beneficiary = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Beneficiary = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Beneficiary.Decode(byteArray, ref p);
             Bond = new Substrate.NetApi.Model.Types.Primitive.U128();
             Bond.Decode(byteArray, ref p);

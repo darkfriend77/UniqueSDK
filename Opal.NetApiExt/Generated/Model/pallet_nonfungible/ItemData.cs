@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_nonfungible
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_nonfungible
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_nonfungible
         /// <summary>
         /// >> owner
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr Owner { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr Owner { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_nonfungible
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Owner = new Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr();
+            Owner = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr();
             Owner.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

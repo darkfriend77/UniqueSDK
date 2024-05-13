@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent
         /// <summary>
         /// >> value
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 Value { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            Value = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

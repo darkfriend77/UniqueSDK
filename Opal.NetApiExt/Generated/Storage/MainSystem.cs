@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,32 +37,32 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Account"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Opal.NetApiExt.Generated.Model.frame_system.AccountInfo)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.AccountInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExtrinsicCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockWeight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockWeight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "AllExtrinsicsLen"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExtrinsicData"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Number"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ParentHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Digest"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Events"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.frame_system.EventRecord>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ParentHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Digest"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Events"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EventRecord>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "EventCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "EventTopics"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "LastRuntimeUpgrade"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "LastRuntimeUpgrade"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "UpgradedToU32RefCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "UpgradedToTripleRefCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExecutionPhase"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.frame_system.EnumPhase)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExecutionPhase"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EnumPhase)));
         }
         
         /// <summary>
         /// >> AccountParams
         ///  The full account information for a particular account ID.
         /// </summary>
-        public static string AccountParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string AccountParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("System", "Account", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -84,10 +84,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Account
         ///  The full account information for a particular account ID.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.frame_system.AccountInfo> Account(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.AccountInfo> Account(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.AccountParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.frame_system.AccountInfo>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.AccountInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -142,10 +142,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> BlockWeight(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> BlockWeight(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.BlockWeightParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -202,10 +202,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> BlockHash
         ///  Map of block numbers to block hashes.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.BlockHashParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -291,10 +291,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ParentHash
         ///  Hash of the previous block.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.primitive_types.H256> ParentHash(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> ParentHash(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.ParentHashParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -320,10 +320,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Digest
         ///  Digest of the current block, also part of the block header.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest> Digest(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest> Digest(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.DigestParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest>(parameters, blockhash, token);
             return result;
         }
         
@@ -361,10 +361,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  Events have a large in-memory size. Box the events to not go out-of-memory
         ///  just in case someone still reads them from within the runtime.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.frame_system.EventRecord>> Events(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EventRecord>> Events(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.EventsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.frame_system.EventRecord>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EventRecord>>(parameters, blockhash, token);
             return result;
         }
         
@@ -410,7 +410,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  the `EventIndex` then in case if the topic has the same contents on the next block
         ///  no notification will be triggered thus the event might be lost.
         /// </summary>
-        public static string EventTopicsParams(Opal.NetApiExt.Generated.Model.primitive_types.H256 key)
+        public static string EventTopicsParams(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
         {
             return RequestGenerator.GetStorage("System", "EventTopics", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -439,7 +439,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  the `EventIndex` then in case if the topic has the same contents on the next block
         ///  no notification will be triggered thus the event might be lost.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> EventTopics(Opal.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> EventTopics(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.EventTopicsParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, blockhash, token);
@@ -468,10 +468,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> LastRuntimeUpgrade
         ///  Stores the `spec_version` and `spec_name` of when the last runtime upgrade happened.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo> LastRuntimeUpgrade(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo> LastRuntimeUpgrade(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.LastRuntimeUpgradeParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -557,10 +557,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ExecutionPhase
         ///  The execution phase of the block.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.frame_system.EnumPhase> ExecutionPhase(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EnumPhase> ExecutionPhase(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.ExecutionPhaseParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.frame_system.EnumPhase>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EnumPhase>(parameters, blockhash, token);
             return result;
         }
     }
@@ -671,9 +671,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> BlockWeights
         ///  Block & extrinsics weights: base values and limits.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_system.limits.BlockWeights BlockWeights()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.limits.BlockWeights BlockWeights()
         {
-            var result = new Opal.NetApiExt.Generated.Model.frame_system.limits.BlockWeights();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.limits.BlockWeights();
             result.Create("0x025B1F5D00070088526A7402004001C2A0A91D000107D00918A44B0200D000010700E6BD4F57020" +
                     "0F000010000C2A0A91D000107D0ABACBE680200200101070088526A7402004001010700A2941A1D0" +
                     "2005000C2A0A91D00000000");
@@ -684,9 +684,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> BlockLength
         ///  The maximum length of a block (in bytes).
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_system.limits.BlockLength BlockLength()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.limits.BlockLength BlockLength()
         {
-            var result = new Opal.NetApiExt.Generated.Model.frame_system.limits.BlockLength();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.limits.BlockLength();
             result.Create("0x00003C000000500000005000");
             return result;
         }
@@ -706,9 +706,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> DbWeight
         ///  The weight of runtime database operations the runtime can invoke.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.RuntimeDbWeight DbWeight()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.RuntimeDbWeight DbWeight()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_weights.RuntimeDbWeight();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.RuntimeDbWeight();
             result.Create("0x40787D010000000000E1F50500000000");
             return result;
         }
@@ -717,9 +717,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Version
         ///  Get the chain's current version.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_version.RuntimeVersion Version()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion Version()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_version.RuntimeVersion();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion();
             result.Create(@"0x106F70616C106F70616C01000000F70B9900000000003C4FDC4D29738B36D503000000144F3C7616F5C8A102000000DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000582211F65BB14B8905000000AB3C0572291FEB8B01000000DD718D5CC53262D401000000EA93E3F16F3D696202000000BC9D89904F5B923F0100000037C8BB1350A9A2A80400000032D67AE360CAE94401000000E65B00E46CEDD0AA020000000300000001");
             return result;
         }

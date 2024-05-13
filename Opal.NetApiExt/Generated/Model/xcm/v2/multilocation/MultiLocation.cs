@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v2.multilocation
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
 {
     
     
@@ -31,7 +31,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v2.multilocation
         /// <summary>
         /// >> interior
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions Interior { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions Interior { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v2.multilocation
             var start = p;
             Parents = new Substrate.NetApi.Model.Types.Primitive.U8();
             Parents.Decode(byteArray, ref p);
-            Interior = new Opal.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions();
+            Interior = new Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions();
             Interior.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

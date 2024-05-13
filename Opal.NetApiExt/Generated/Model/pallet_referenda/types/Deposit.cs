@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
         /// <summary>
         /// >> who
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
@@ -52,7 +52,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Who = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Who = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Who.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);

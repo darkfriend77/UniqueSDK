@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,8 +36,8 @@ namespace Opal.NetApiExt.Generated.Storage
         public TechnicalCommitteeMembershipStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommitteeMembership", "Members"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommitteeMembership", "Prime"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommitteeMembership", "Members"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommitteeMembership", "Prime"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
         }
         
         /// <summary>
@@ -62,10 +62,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> Members(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> Members(string blockhash, CancellationToken token)
         {
             string parameters = TechnicalCommitteeMembershipStorage.MembersParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, blockhash, token);
             return result;
         }
         
@@ -91,10 +91,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Prime
         ///  The current prime member, if one exists.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(string blockhash, CancellationToken token)
         {
             string parameters = TechnicalCommitteeMembershipStorage.PrimeParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
@@ -109,7 +109,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> add_member
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method AddMember(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        public static Method AddMember(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -120,7 +120,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> remove_member
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RemoveMember(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        public static Method RemoveMember(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -131,7 +131,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> swap_member
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SwapMember(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress remove, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress add)
+        public static Method SwapMember(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress remove, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress add)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(remove.Encode());
@@ -143,7 +143,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> reset_members
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ResetMembers(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> members)
+        public static Method ResetMembers(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> members)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(members.Encode());
@@ -154,7 +154,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> change_key
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ChangeKey(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
+        public static Method ChangeKey(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -165,7 +165,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_prime
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetPrime(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        public static Method SetPrime(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());

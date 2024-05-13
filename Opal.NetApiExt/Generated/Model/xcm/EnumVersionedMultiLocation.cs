@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm
     /// <summary>
     /// >> 127 - Variant[xcm.VersionedMultiLocation]
     /// </summary>
-    public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, BaseVoid, Opal.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>
+    public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>
     {
     }
 }

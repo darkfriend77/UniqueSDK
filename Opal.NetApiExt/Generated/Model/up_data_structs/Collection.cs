@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -27,39 +27,39 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> owner
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> mode
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode { get; set; }
         /// <summary>
         /// >> name
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 Name { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 Name { get; set; }
         /// <summary>
         /// >> description
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 Description { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 Description { get; set; }
         /// <summary>
         /// >> token_prefix
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 TokenPrefix { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 TokenPrefix { get; set; }
         /// <summary>
         /// >> sponsorship
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState Sponsorship { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState Sponsorship { get; set; }
         /// <summary>
         /// >> limits
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits Limits { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits Limits { get; set; }
         /// <summary>
         /// >> permissions
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions Permissions { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions Permissions { get; set; }
         /// <summary>
         /// >> flags
         /// </summary>
-        public Opal.NetApiExt.Generated.Types.Base.Arr1U8 Flags { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr1U8 Flags { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -87,23 +87,23 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Owner = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Owner = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Owner.Decode(byteArray, ref p);
-            Mode = new Opal.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode();
+            Mode = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode();
             Mode.Decode(byteArray, ref p);
-            Name = new Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
+            Name = new Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
             Name.Decode(byteArray, ref p);
-            Description = new Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
+            Description = new Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
             Description.Decode(byteArray, ref p);
-            TokenPrefix = new Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+            TokenPrefix = new Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
             TokenPrefix.Decode(byteArray, ref p);
-            Sponsorship = new Opal.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState();
+            Sponsorship = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState();
             Sponsorship.Decode(byteArray, ref p);
-            Limits = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
+            Limits = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
             Limits.Decode(byteArray, ref p);
-            Permissions = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions();
+            Permissions = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions();
             Permissions.Decode(byteArray, ref p);
-            Flags = new Opal.NetApiExt.Generated.Types.Base.Arr1U8();
+            Flags = new Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr1U8();
             Flags.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

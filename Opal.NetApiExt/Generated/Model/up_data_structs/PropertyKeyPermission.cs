@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -27,11 +27,11 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> key
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 Key { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 Key { get; set; }
         /// <summary>
         /// >> permission
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.PropertyPermission Permission { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertyPermission Permission { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -52,9 +52,9 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Key = new Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
+            Key = new Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
             Key.Decode(byteArray, ref p);
-            Permission = new Opal.NetApiExt.Generated.Model.up_data_structs.PropertyPermission();
+            Permission = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertyPermission();
             Permission.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest
         /// <summary>
         /// >> logs
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem> Logs { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem> Logs { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem>();
+            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem>();
             Logs.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

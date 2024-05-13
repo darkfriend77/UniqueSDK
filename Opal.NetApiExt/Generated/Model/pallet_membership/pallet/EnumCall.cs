@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_membership.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_membership.pallet
 {
     
     
@@ -69,7 +69,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_membership.pallet
     /// >> 204 - Variant[pallet_membership.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid>
     {
     }
 }

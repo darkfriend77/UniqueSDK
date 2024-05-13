@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> judgements
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 Judgements { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 Judgements { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> info
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo Info { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo Info { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Judgements = new Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3();
+            Judgements = new Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3();
             Judgements.Decode(byteArray, ref p);
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Info = new Opal.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo();
+            Info = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo();
             Info.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

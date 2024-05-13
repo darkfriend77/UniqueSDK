@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_evm.account
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_evm.account
     /// <summary>
     /// >> 273 - Variant[pallet_evm.account.BasicCrossAccountIdRepr]
     /// </summary>
-    public sealed class EnumBasicCrossAccountIdRepr : BaseEnumExt<BasicCrossAccountIdRepr, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.primitive_types.H160>
+    public sealed class EnumBasicCrossAccountIdRepr : BaseEnumExt<BasicCrossAccountIdRepr, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {
     }
 }

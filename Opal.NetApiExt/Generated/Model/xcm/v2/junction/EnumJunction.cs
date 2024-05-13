@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v2.junction
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.junction
 {
     
     
@@ -70,7 +70,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v2.junction
     /// <summary>
     /// >> 130 - Variant[xcm.v2.junction.Junction]
     /// </summary>
-    public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Opal.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Opal.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Opal.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Opal.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Opal.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Opal.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Opal.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Opal.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>
+    public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>
     {
     }
 }

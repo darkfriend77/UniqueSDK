@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_trie.storage_proof
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_trie.storage_proof
         /// <summary>
         /// >> trie_nodes
         /// </summary>
-        public Opal.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_trie.storage_proof
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            TrieNodes = new Opal.NetApiExt.Generated.Types.Base.BTreeSetT1();
+            TrieNodes = new Substrate.Opal.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
             TrieNodes.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

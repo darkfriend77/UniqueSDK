@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3.multiasset
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
@@ -27,11 +27,11 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3.multiasset
         /// <summary>
         /// >> id
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId Id { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId Id { get; set; }
         /// <summary>
         /// >> fun
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumFungibility Fun { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumFungibility Fun { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -52,9 +52,9 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3.multiasset
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId();
+            Id = new Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId();
             Id.Decode(byteArray, ref p);
-            Fun = new Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumFungibility();
+            Fun = new Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumFungibility();
             Fun.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

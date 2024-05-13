@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         /// <summary>
         /// >> max_individual
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxIndividual { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxIndividual { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            MaxIndividual = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            MaxIndividual = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             MaxIndividual.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

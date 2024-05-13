@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.primitive_types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.primitive_types
         /// <summary>
         /// >> value
         /// </summary>
-        public Opal.NetApiExt.Generated.Types.Base.Arr4U64 Value { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr4U64 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.primitive_types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Opal.NetApiExt.Generated.Types.Base.Arr4U64();
+            Value = new Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr4U64();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

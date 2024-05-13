@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet
 {
     
     
@@ -69,7 +69,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet
     /// >> 33 - Variant[cumulus_pallet_parachain_system.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Opal.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Types.Base.Arr32U8>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
     {
     }
 }

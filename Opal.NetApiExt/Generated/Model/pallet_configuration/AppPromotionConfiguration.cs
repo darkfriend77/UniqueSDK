@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_configuration
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_configuration
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_configuration
         /// <summary>
         /// >> interval_income
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> IntervalIncome { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> IntervalIncome { get; set; }
         /// <summary>
         /// >> max_stakers_per_calculation
         /// </summary>
@@ -66,7 +66,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_configuration
             RecalculationInterval.Decode(byteArray, ref p);
             PendingInterval = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
             PendingInterval.Decode(byteArray, ref p);
-            IntervalIncome = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>();
+            IntervalIncome = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>();
             IntervalIncome.Decode(byteArray, ref p);
             MaxStakersPerCalculation = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8>();
             MaxStakersPerCalculation.Decode(byteArray, ref p);

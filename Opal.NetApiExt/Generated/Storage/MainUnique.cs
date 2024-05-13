@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -38,30 +38,30 @@ namespace Opal.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "ChainVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "CreateItemBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "NftTransferBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "FungibleTransferBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "ReFungibleTransferBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "TokenPropertyBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "NftApproveBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "FungibleApproveBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Unique", "RefungibleApproveBasket"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  (Collection id (controlled?2), who created (real))
         ///  TODO: Off chain worker should remove from this map when collection gets removed
         /// </summary>
-        public static string CreateItemBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        public static string CreateItemBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
             return RequestGenerator.GetStorage("Unique", "CreateItemBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -119,7 +119,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  (Collection id (controlled?2), who created (real))
         ///  TODO: Off chain worker should remove from this map when collection gets removed
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CreateItemBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CreateItemBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.CreateItemBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -130,7 +130,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> NftTransferBasketParams
         ///  Collection id (controlled?2), token id (controlled?2)
         /// </summary>
-        public static string NftTransferBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
+        public static string NftTransferBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
         {
             return RequestGenerator.GetStorage("Unique", "NftTransferBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -150,7 +150,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> NftTransferBasket
         ///  Collection id (controlled?2), token id (controlled?2)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.NftTransferBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -161,7 +161,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> FungibleTransferBasketParams
         ///  Collection id (controlled?2), owning user (real)
         /// </summary>
-        public static string FungibleTransferBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        public static string FungibleTransferBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
             return RequestGenerator.GetStorage("Unique", "FungibleTransferBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -181,7 +181,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> FungibleTransferBasket
         ///  Collection id (controlled?2), owning user (real)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.FungibleTransferBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -192,7 +192,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ReFungibleTransferBasketParams
         ///  Collection id (controlled?2), token id (controlled?2)
         /// </summary>
-        public static string ReFungibleTransferBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        public static string ReFungibleTransferBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
             return RequestGenerator.GetStorage("Unique", "ReFungibleTransferBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -213,7 +213,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ReFungibleTransferBasket
         ///  Collection id (controlled?2), token id (controlled?2)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReFungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReFungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.ReFungibleTransferBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -224,7 +224,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> TokenPropertyBasketParams
         ///  Last sponsoring of token property setting // todo:doc rephrase this and the following
         /// </summary>
-        public static string TokenPropertyBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
+        public static string TokenPropertyBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
         {
             return RequestGenerator.GetStorage("Unique", "TokenPropertyBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -244,7 +244,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> TokenPropertyBasket
         ///  Last sponsoring of token property setting // todo:doc rephrase this and the following
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokenPropertyBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokenPropertyBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.TokenPropertyBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -255,7 +255,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> NftApproveBasketParams
         ///  Last sponsoring of NFT approval in a collection
         /// </summary>
-        public static string NftApproveBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
+        public static string NftApproveBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
         {
             return RequestGenerator.GetStorage("Unique", "NftApproveBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -275,7 +275,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> NftApproveBasket
         ///  Last sponsoring of NFT approval in a collection
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.NftApproveBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -286,7 +286,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> FungibleApproveBasketParams
         ///  Last sponsoring of fungible tokens approval in a collection
         /// </summary>
-        public static string FungibleApproveBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        public static string FungibleApproveBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
             return RequestGenerator.GetStorage("Unique", "FungibleApproveBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -306,7 +306,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> FungibleApproveBasket
         ///  Last sponsoring of fungible tokens approval in a collection
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.FungibleApproveBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -317,7 +317,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> RefungibleApproveBasketParams
         ///  Last sponsoring of RFT approval in a collection
         /// </summary>
-        public static string RefungibleApproveBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        public static string RefungibleApproveBasketParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
             return RequestGenerator.GetStorage("Unique", "RefungibleApproveBasket", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -338,7 +338,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> RefungibleApproveBasket
         ///  Last sponsoring of RFT approval in a collection
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RefungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RefungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.RefungibleApproveBasketParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -356,7 +356,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> create_collection
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateCollection(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 collection_name, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 collection_description, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 token_prefix, Opal.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode mode)
+        public static Method CreateCollection(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 collection_name, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 collection_description, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 token_prefix, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode mode)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_name.Encode());
@@ -370,7 +370,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> create_collection_ex
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateCollectionEx(Opal.NetApiExt.Generated.Model.up_data_structs.CreateCollectionData data)
+        public static Method CreateCollectionEx(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CreateCollectionData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(data.Encode());
@@ -381,7 +381,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> destroy_collection
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method DestroyCollection(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
+        public static Method DestroyCollection(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -392,7 +392,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> add_to_allow_list
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method AddToAllowList(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr address)
+        public static Method AddToAllowList(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr address)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -404,7 +404,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> remove_from_allow_list
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method RemoveFromAllowList(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr address)
+        public static Method RemoveFromAllowList(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr address)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -416,7 +416,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> change_collection_owner
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method ChangeCollectionOwner(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 new_owner)
+        public static Method ChangeCollectionOwner(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 new_owner)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -428,7 +428,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> add_collection_admin
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method AddCollectionAdmin(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr new_admin_id)
+        public static Method AddCollectionAdmin(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr new_admin_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -440,7 +440,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> remove_collection_admin
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method RemoveCollectionAdmin(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr account_id)
+        public static Method RemoveCollectionAdmin(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr account_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -452,7 +452,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_collection_sponsor
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetCollectionSponsor(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 new_sponsor)
+        public static Method SetCollectionSponsor(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 new_sponsor)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -464,7 +464,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> confirm_sponsorship
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method ConfirmSponsorship(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
+        public static Method ConfirmSponsorship(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -475,7 +475,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> remove_collection_sponsor
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method RemoveCollectionSponsor(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
+        public static Method RemoveCollectionSponsor(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -486,7 +486,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> create_item
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateItem(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr owner, Opal.NetApiExt.Generated.Model.up_data_structs.EnumCreateItemData data)
+        public static Method CreateItem(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr owner, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCreateItemData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -499,7 +499,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> create_multiple_items
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateMultipleItems(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr owner, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.EnumCreateItemData> items_data)
+        public static Method CreateMultipleItems(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr owner, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCreateItemData> items_data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -512,7 +512,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_collection_properties
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetCollectionProperties(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.Property> properties)
+        public static Method SetCollectionProperties(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.Property> properties)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -524,7 +524,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> delete_collection_properties
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method DeleteCollectionProperties(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> property_keys)
+        public static Method DeleteCollectionProperties(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> property_keys)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -536,7 +536,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_token_properties
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetTokenProperties(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.Property> properties)
+        public static Method SetTokenProperties(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.Property> properties)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -549,7 +549,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> delete_token_properties
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method DeleteTokenProperties(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> property_keys)
+        public static Method DeleteTokenProperties(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> property_keys)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -562,7 +562,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_token_property_permissions
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetTokenPropertyPermissions(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> property_permissions)
+        public static Method SetTokenPropertyPermissions(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> property_permissions)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -574,7 +574,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> create_multiple_items_ex
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateMultipleItemsEx(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.EnumCreateItemExData data)
+        public static Method CreateMultipleItemsEx(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumCreateItemExData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -586,7 +586,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_transfers_enabled_flag
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetTransfersEnabledFlag(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Primitive.Bool value)
+        public static Method SetTransfersEnabledFlag(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Primitive.Bool value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -598,7 +598,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> burn_item
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method BurnItem(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
+        public static Method BurnItem(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -611,7 +611,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> burn_from
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method BurnFrom(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr from, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
+        public static Method BurnFrom(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr from, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -625,7 +625,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method Transfer(Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr recipient, Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
+        public static Method Transfer(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr recipient, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(recipient.Encode());
@@ -639,7 +639,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> approve
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method Approve(Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr spender, Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 amount)
+        public static Method Approve(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr spender, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 amount)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(spender.Encode());
@@ -653,7 +653,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> approve_from
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method ApproveFrom(Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr from, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr to, Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 amount)
+        public static Method ApproveFrom(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr from, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr to, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 amount)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(from.Encode());
@@ -668,7 +668,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer_from
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method TransferFrom(Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr from, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr recipient, Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
+        public static Method TransferFrom(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr from, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr recipient, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id, Substrate.NetApi.Model.Types.Primitive.U128 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(from.Encode());
@@ -683,7 +683,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_collection_limits
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetCollectionLimits(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits new_limit)
+        public static Method SetCollectionLimits(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits new_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -695,7 +695,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_collection_permissions
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetCollectionPermissions(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions new_permission)
+        public static Method SetCollectionPermissions(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions new_permission)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -707,7 +707,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> repartition
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method Repartition(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Primitive.U128 amount)
+        public static Method Repartition(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Primitive.U128 amount)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -720,7 +720,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_allowance_for_all
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method SetAllowanceForAll(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr @operator, Substrate.NetApi.Model.Types.Primitive.Bool approve)
+        public static Method SetAllowanceForAll(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr @operator, Substrate.NetApi.Model.Types.Primitive.Bool approve)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -733,7 +733,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_repair_collection
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method ForceRepairCollection(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
+        public static Method ForceRepairCollection(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -744,7 +744,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_repair_item
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method ForceRepairItem(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId item_id)
+        public static Method ForceRepairItem(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId item_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -873,9 +873,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> nft_default_collection_limits
         ///  Default NFT collection limit.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits nft_default_collection_limits()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits nft_default_collection_limits()
         {
-            var result = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
             result.Create("0x0100E1F5050100080000010001FFFFFFFF01050000000105000000010001010101");
             return result;
         }
@@ -884,9 +884,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> rft_default_collection_limits
         ///  Default RFT collection limit.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits rft_default_collection_limits()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits rft_default_collection_limits()
         {
-            var result = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
             result.Create("0x0100E1F5050100080000010001FFFFFFFF01050000000105000000010001010101");
             return result;
         }
@@ -895,9 +895,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ft_default_collection_limits
         ///  Default FT collection limit.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits ft_default_collection_limits()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits ft_default_collection_limits()
         {
-            var result = new Opal.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
             result.Create("0x0100E1F5050100080000010001FFFFFFFF01050000000105000000010001010101");
             return result;
         }

@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3
     /// <summary>
     /// >> 248 - Variant[xcm.v3.MaybeErrorCode]
     /// </summary>
-    public sealed class EnumMaybeErrorCode : BaseEnumExt<MaybeErrorCode, BaseVoid, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>
+    public sealed class EnumMaybeErrorCode : BaseEnumExt<MaybeErrorCode, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>
     {
     }
 }

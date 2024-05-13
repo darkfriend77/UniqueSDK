@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point
 {
     
     

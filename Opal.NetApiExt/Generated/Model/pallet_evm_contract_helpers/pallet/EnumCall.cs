@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_evm_contract_helpers.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm_contract_helpers.pallet
 {
     
     
@@ -33,7 +33,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_evm_contract_helpers.pallet
     /// >> 349 - Variant[pallet_evm_contract_helpers.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H160>>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160>>
     {
     }
 }

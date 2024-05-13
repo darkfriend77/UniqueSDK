@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
 {
     
     
@@ -48,7 +48,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
     /// >> 366 - Variant[cumulus_pallet_xcm.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
     {
     }
 }

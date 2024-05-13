@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_support.dispatch
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.frame_support.dispatch
         /// <summary>
         /// >> weight
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Weight { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Weight { get; set; }
         /// <summary>
         /// >> class
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass Class { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass Class { get; set; }
         /// <summary>
         /// >> pays_fee
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays PaysFee { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays PaysFee { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.frame_support.dispatch
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Weight = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            Weight = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             Weight.Decode(byteArray, ref p);
-            Class = new Opal.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass();
+            Class = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass();
             Class.Decode(byteArray, ref p);
-            PaysFee = new Opal.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays();
+            PaysFee = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays();
             PaysFee.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

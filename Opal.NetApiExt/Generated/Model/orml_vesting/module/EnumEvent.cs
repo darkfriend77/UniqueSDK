@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.orml_vesting.module
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.module
 {
     
     
@@ -45,7 +45,7 @@ namespace Opal.NetApiExt.Generated.Model.orml_vesting.module
     /// >> 45 - Variant[orml_vesting.module.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {
     }
 }

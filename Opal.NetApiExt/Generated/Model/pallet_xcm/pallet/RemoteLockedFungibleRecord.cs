@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_xcm.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
@@ -31,15 +31,15 @@ namespace Opal.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// <summary>
         /// >> owner
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Owner { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Owner { get; set; }
         /// <summary>
         /// >> locker
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Locker { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Locker { get; set; }
         /// <summary>
         /// >> consumers
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 Consumers { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 Consumers { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -64,11 +64,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_xcm.pallet
             var start = p;
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);
-            Owner = new Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
+            Owner = new Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
             Owner.Decode(byteArray, ref p);
-            Locker = new Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
+            Locker = new Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
             Locker.Decode(byteArray, ref p);
-            Consumers = new Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39();
+            Consumers = new Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39();
             Consumers.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

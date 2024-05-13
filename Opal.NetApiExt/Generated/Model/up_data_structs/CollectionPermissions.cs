@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> access
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode> Access { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode> Access { get; set; }
         /// <summary>
         /// >> mint_mode
         /// </summary>
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> nesting
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.up_data_structs.NestingPermissions> Nesting { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.NestingPermissions> Nesting { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Access = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode>();
+            Access = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode>();
             Access.Decode(byteArray, ref p);
             MintMode = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool>();
             MintMode.Decode(byteArray, ref p);
-            Nesting = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.up_data_structs.NestingPermissions>();
+            Nesting = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.NestingPermissions>();
             Nesting.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> v
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId V { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId V { get; set; }
         /// <summary>
         /// >> r
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 R { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 R { get; set; }
         /// <summary>
         /// >> s
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 S { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 S { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            V = new Opal.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId();
+            V = new Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId();
             V.Decode(byteArray, ref p);
-            R = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            R = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             R.Decode(byteArray, ref p);
-            S = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            S = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             S.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

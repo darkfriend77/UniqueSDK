@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_system.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.pallet
 {
     
     
@@ -63,7 +63,7 @@ namespace Opal.NetApiExt.Generated.Model.frame_system.pallet
     /// >> 21 - Variant[frame_system.pallet.Event]
     /// Event for the System pallet.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Opal.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Opal.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Opal.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>>
     {
     }
 }

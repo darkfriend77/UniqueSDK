@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_support.traits.schedule
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.schedule
 {
     
     

@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -38,9 +38,9 @@ namespace Opal.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "IncompleteSince"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "Agenda"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "Lookup"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Types.Base.Arr32U8), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>)));
         }
         
         /// <summary>
@@ -94,10 +94,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> Agenda(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> Agenda(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = SchedulerStorage.AgendaParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>(parameters, blockhash, token);
             return result;
         }
         
@@ -108,7 +108,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  For v3 -> v4 the previously unbounded identities are Blake2-256 hashed to form the v4
         ///  identities.
         /// </summary>
-        public static string LookupParams(Opal.NetApiExt.Generated.Types.Base.Arr32U8 key)
+        public static string LookupParams(Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8 key)
         {
             return RequestGenerator.GetStorage("Scheduler", "Lookup", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -131,7 +131,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  For v3 -> v4 the previously unbounded identities are Blake2-256 hashed to form the v4
         ///  identities.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> Lookup(Opal.NetApiExt.Generated.Types.Base.Arr32U8 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> Lookup(Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8 key, string blockhash, CancellationToken token)
         {
             string parameters = SchedulerStorage.LookupParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
@@ -149,7 +149,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> schedule
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Schedule(Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
+        public static Method Schedule(Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(when.Encode());
@@ -175,7 +175,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> schedule_named
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ScheduleNamed(Opal.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
+        public static Method ScheduleNamed(Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(id.Encode());
@@ -190,7 +190,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> cancel_named
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method CancelNamed(Opal.NetApiExt.Generated.Types.Base.Arr32U8 id)
+        public static Method CancelNamed(Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8 id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(id.Encode());
@@ -201,7 +201,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> schedule_after
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ScheduleAfter(Substrate.NetApi.Model.Types.Primitive.U32 after, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
+        public static Method ScheduleAfter(Substrate.NetApi.Model.Types.Primitive.U32 after, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(after.Encode());
@@ -215,7 +215,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> schedule_named_after
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ScheduleNamedAfter(Opal.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U32 after, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
+        public static Method ScheduleNamedAfter(Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U32 after, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(id.Encode());
@@ -237,9 +237,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> MaximumWeight
         ///  The maximum weight that may be scheduled per block for any dispatchables.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaximumWeight()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaximumWeight()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             result.Create("0x0700B864D9450200C000");
             return result;
         }

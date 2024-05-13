@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_sudo.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
 {
     
     
@@ -45,7 +45,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_sudo.pallet
     /// >> 42 - Variant[pallet_sudo.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Opal.NetApiExt.Generated.Types.Base.EnumResult, Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Opal.NetApiExt.Generated.Types.Base.EnumResult>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult>
     {
     }
 }

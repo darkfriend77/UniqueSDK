@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,15 +36,15 @@ namespace Opal.NetApiExt.Generated.Storage
         public SessionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "Validators"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "Validators"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "CurrentIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "QueuedChanged"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "QueuedKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "QueuedKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "DisabledValidators"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "NextKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Session", "KeyOwner"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>), typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
         }
         
         /// <summary>
@@ -69,10 +69,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Validators
         ///  The current set of validators.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Validators(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Validators(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.ValidatorsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -160,10 +160,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  The queued keys for the next session. When the next session begins, these keys
         ///  will be used to determine the validator's session keys.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>>> QueuedKeys(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>>> QueuedKeys(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.QueuedKeysParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -208,7 +208,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> NextKeysParams
         ///  The next session keys for a validator.
         /// </summary>
-        public static string NextKeysParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string NextKeysParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("Session", "NextKeys", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -228,10 +228,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> NextKeys
         ///  The next session keys for a validator.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys> NextKeys(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys> NextKeys(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.NextKeysParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys>(parameters, blockhash, token);
             return result;
         }
         
@@ -239,7 +239,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> KeyOwnerParams
         ///  The owner of a key. The key is the `KeyTypeId` + the encoded key.
         /// </summary>
-        public static string KeyOwnerParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key)
+        public static string KeyOwnerParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key)
         {
             return RequestGenerator.GetStorage("Session", "KeyOwner", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -259,10 +259,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> KeyOwner
         ///  The owner of a key. The key is the `KeyTypeId` + the encoded key.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> KeyOwner(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> KeyOwner(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key, string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.KeyOwnerParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
@@ -277,7 +277,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_keys
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetKeys(Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys keys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> proof)
+        public static Method SetKeys(Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.SessionKeys keys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(keys.Encode());

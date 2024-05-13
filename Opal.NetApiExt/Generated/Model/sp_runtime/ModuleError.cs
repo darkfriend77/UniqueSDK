@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_runtime
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
@@ -31,7 +31,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime
         /// <summary>
         /// >> error
         /// </summary>
-        public Opal.NetApiExt.Generated.Types.Base.Arr4U8 Error { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr4U8 Error { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime
             var start = p;
             Index = new Substrate.NetApi.Model.Types.Primitive.U8();
             Index.Decode(byteArray, ref p);
-            Error = new Opal.NetApiExt.Generated.Types.Base.Arr4U8();
+            Error = new Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr4U8();
             Error.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

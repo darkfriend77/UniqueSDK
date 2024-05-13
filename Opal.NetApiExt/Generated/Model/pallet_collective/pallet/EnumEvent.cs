@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_collective.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_collective.pallet
 {
     
     
@@ -71,7 +71,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_collective.pallet
     /// >> 75 - Variant[pallet_collective.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.polkadot_primitives.v6
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
 {
     
     
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.polkadot_primitives.v6
         /// <summary>
         /// >> mqc_head
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.primitive_types.H256> MqcHead { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> MqcHead { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -82,7 +82,7 @@ namespace Opal.NetApiExt.Generated.Model.polkadot_primitives.v6
             MsgCount.Decode(byteArray, ref p);
             TotalSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             TotalSize.Decode(byteArray, ref p);
-            MqcHead = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.primitive_types.H256>();
+            MqcHead = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             MqcHead.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

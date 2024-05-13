@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
     /// <summary>
     /// >> 93 - Variant[pallet_state_trie_migration.pallet.Progress]
     /// </summary>
-    public sealed class EnumProgress : BaseEnumExt<Progress, BaseVoid, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, BaseVoid>
+    public sealed class EnumProgress : BaseEnumExt<Progress, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, BaseVoid>
     {
     }
 }

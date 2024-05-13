@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_democracy.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types
 {
     
     
@@ -31,11 +31,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_democracy.types
         /// <summary>
         /// >> proposal
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Proposal { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Proposal { get; set; }
         /// <summary>
         /// >> threshold
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold Threshold { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold Threshold { get; set; }
         /// <summary>
         /// >> delay
         /// </summary>
@@ -43,7 +43,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_democracy.types
         /// <summary>
         /// >> tally
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_democracy.types.Tally Tally { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types.Tally Tally { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -69,13 +69,13 @@ namespace Opal.NetApiExt.Generated.Model.pallet_democracy.types
             var start = p;
             End = new Substrate.NetApi.Model.Types.Primitive.U32();
             End.Decode(byteArray, ref p);
-            Proposal = new Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
+            Proposal = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
             Proposal.Decode(byteArray, ref p);
-            Threshold = new Opal.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold();
+            Threshold = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold();
             Threshold.Decode(byteArray, ref p);
             Delay = new Substrate.NetApi.Model.Types.Primitive.U32();
             Delay.Decode(byteArray, ref p);
-            Tally = new Opal.NetApiExt.Generated.Model.pallet_democracy.types.Tally();
+            Tally = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types.Tally();
             Tally.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

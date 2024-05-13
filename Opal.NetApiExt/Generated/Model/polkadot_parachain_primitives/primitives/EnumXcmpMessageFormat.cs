@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives
 {
     
     

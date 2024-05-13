@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_runtime
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime
     /// <summary>
     /// >> 673 - Variant[sp_runtime.MultiSignature]
     /// </summary>
-    public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Opal.NetApiExt.Generated.Model.sp_core.ed25519.Signature, Opal.NetApiExt.Generated.Model.sp_core.sr25519.Signature, Opal.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>
+    public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>
     {
     }
 }

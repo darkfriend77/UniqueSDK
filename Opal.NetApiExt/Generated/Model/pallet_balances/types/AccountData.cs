@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
@@ -39,7 +39,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_balances.types
         /// <summary>
         /// >> flags
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags Flags { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags Flags { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -68,7 +68,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_balances.types
             Reserved.Decode(byteArray, ref p);
             Frozen = new Substrate.NetApi.Model.Types.Primitive.U128();
             Frozen.Decode(byteArray, ref p);
-            Flags = new Opal.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags();
+            Flags = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags();
             Flags.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

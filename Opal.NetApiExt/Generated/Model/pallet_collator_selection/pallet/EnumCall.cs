@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_collator_selection.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet
 {
     
     
@@ -69,7 +69,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_collator_selection.pallet
     /// >> 110 - Variant[pallet_collator_selection.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {
     }
 }

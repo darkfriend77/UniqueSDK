@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_ranked_collective.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet
 {
     
     
@@ -52,7 +52,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_ranked_collective.pallet
     /// >> 78 - Variant[pallet_ranked_collective.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord, Opal.NetApiExt.Generated.Model.pallet_ranked_collective.Tally>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ranked_collective.Tally>>
     {
     }
 }

@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_test_utils.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_test_utils.pallet
 {
     
     
@@ -63,7 +63,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_test_utils.pallet
     /// >> 359 - Variant[pallet_test_utils.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>>
     {
     }
 }

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types
 {
     
     
@@ -31,15 +31,15 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
         /// <summary>
         /// >> origin
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller Origin { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller Origin { get; set; }
         /// <summary>
         /// >> proposal
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Proposal { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Proposal { get; set; }
         /// <summary>
         /// >> enactment
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime Enactment { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime Enactment { get; set; }
         /// <summary>
         /// >> submitted
         /// </summary>
@@ -47,19 +47,19 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
         /// <summary>
         /// >> submission_deposit
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_referenda.types.Deposit SubmissionDeposit { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit SubmissionDeposit { get; set; }
         /// <summary>
         /// >> decision_deposit
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_referenda.types.Deposit> DecisionDeposit { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit> DecisionDeposit { get; set; }
         /// <summary>
         /// >> deciding
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus> Deciding { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus> Deciding { get; set; }
         /// <summary>
         /// >> tally
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_ranked_collective.Tally Tally { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ranked_collective.Tally Tally { get; set; }
         /// <summary>
         /// >> in_queue
         /// </summary>
@@ -99,21 +99,21 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
             var start = p;
             Track = new Substrate.NetApi.Model.Types.Primitive.U16();
             Track.Decode(byteArray, ref p);
-            Origin = new Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller();
+            Origin = new Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller();
             Origin.Decode(byteArray, ref p);
-            Proposal = new Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
+            Proposal = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
             Proposal.Decode(byteArray, ref p);
-            Enactment = new Opal.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime();
+            Enactment = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime();
             Enactment.Decode(byteArray, ref p);
             Submitted = new Substrate.NetApi.Model.Types.Primitive.U32();
             Submitted.Decode(byteArray, ref p);
-            SubmissionDeposit = new Opal.NetApiExt.Generated.Model.pallet_referenda.types.Deposit();
+            SubmissionDeposit = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit();
             SubmissionDeposit.Decode(byteArray, ref p);
-            DecisionDeposit = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>();
+            DecisionDeposit = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>();
             DecisionDeposit.Decode(byteArray, ref p);
-            Deciding = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus>();
+            Deciding = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus>();
             Deciding.Decode(byteArray, ref p);
-            Tally = new Opal.NetApiExt.Generated.Model.pallet_ranked_collective.Tally();
+            Tally = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ranked_collective.Tally();
             Tally.Decode(byteArray, ref p);
             InQueue = new Substrate.NetApi.Model.Types.Primitive.Bool();
             InQueue.Decode(byteArray, ref p);

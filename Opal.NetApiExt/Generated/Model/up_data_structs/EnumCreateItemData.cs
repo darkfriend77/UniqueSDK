@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
     /// <summary>
     /// >> 301 - Variant[up_data_structs.CreateItemData]
     /// </summary>
-    public sealed class EnumCreateItemData : BaseEnumExt<CreateItemData, Opal.NetApiExt.Generated.Model.up_data_structs.CreateNftData, Opal.NetApiExt.Generated.Model.up_data_structs.CreateFungibleData, Opal.NetApiExt.Generated.Model.up_data_structs.CreateReFungibleData>
+    public sealed class EnumCreateItemData : BaseEnumExt<CreateItemData, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CreateNftData, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CreateFungibleData, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CreateReFungibleData>
     {
     }
 }

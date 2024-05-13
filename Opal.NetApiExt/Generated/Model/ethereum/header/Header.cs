@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.header
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.header
 {
     
     
@@ -27,47 +27,47 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.header
         /// <summary>
         /// >> parent_hash
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 ParentHash { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 ParentHash { get; set; }
         /// <summary>
         /// >> ommers_hash
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 OmmersHash { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 OmmersHash { get; set; }
         /// <summary>
         /// >> beneficiary
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H160 Beneficiary { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 Beneficiary { get; set; }
         /// <summary>
         /// >> state_root
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 StateRoot { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 StateRoot { get; set; }
         /// <summary>
         /// >> transactions_root
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 TransactionsRoot { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 TransactionsRoot { get; set; }
         /// <summary>
         /// >> receipts_root
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 ReceiptsRoot { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 ReceiptsRoot { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
         /// <summary>
         /// >> difficulty
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 Difficulty { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 Difficulty { get; set; }
         /// <summary>
         /// >> number
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 Number { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 Number { get; set; }
         /// <summary>
         /// >> gas_limit
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
         /// <summary>
         /// >> gas_used
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 GasUsed { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 GasUsed { get; set; }
         /// <summary>
         /// >> timestamp
         /// </summary>
@@ -79,11 +79,11 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.header
         /// <summary>
         /// >> mix_hash
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 MixHash { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 MixHash { get; set; }
         /// <summary>
         /// >> nonce
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.ethereum_types.hash.H64 Nonce { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum_types.hash.H64 Nonce { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -117,35 +117,35 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.header
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ParentHash = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            ParentHash = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             ParentHash.Decode(byteArray, ref p);
-            OmmersHash = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            OmmersHash = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             OmmersHash.Decode(byteArray, ref p);
-            Beneficiary = new Opal.NetApiExt.Generated.Model.primitive_types.H160();
+            Beneficiary = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160();
             Beneficiary.Decode(byteArray, ref p);
-            StateRoot = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            StateRoot = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             StateRoot.Decode(byteArray, ref p);
-            TransactionsRoot = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            TransactionsRoot = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             TransactionsRoot.Decode(byteArray, ref p);
-            ReceiptsRoot = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            ReceiptsRoot = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             ReceiptsRoot.Decode(byteArray, ref p);
-            LogsBloom = new Opal.NetApiExt.Generated.Model.ethbloom.Bloom();
+            LogsBloom = new Substrate.Opal.NET.NetApiExt.Generated.Model.ethbloom.Bloom();
             LogsBloom.Decode(byteArray, ref p);
-            Difficulty = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            Difficulty = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             Difficulty.Decode(byteArray, ref p);
-            Number = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            Number = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             Number.Decode(byteArray, ref p);
-            GasLimit = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            GasLimit = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             GasLimit.Decode(byteArray, ref p);
-            GasUsed = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            GasUsed = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             GasUsed.Decode(byteArray, ref p);
             Timestamp = new Substrate.NetApi.Model.Types.Primitive.U64();
             Timestamp.Decode(byteArray, ref p);
             ExtraData = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             ExtraData.Decode(byteArray, ref p);
-            MixHash = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            MixHash = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             MixHash.Decode(byteArray, ref p);
-            Nonce = new Opal.NetApiExt.Generated.Model.ethereum_types.hash.H64();
+            Nonce = new Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum_types.hash.H64();
             Nonce.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_runtime
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
@@ -95,7 +95,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime
     /// <summary>
     /// >> 25 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Opal.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Opal.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Opal.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Opal.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

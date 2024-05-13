@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible
 {
     
     

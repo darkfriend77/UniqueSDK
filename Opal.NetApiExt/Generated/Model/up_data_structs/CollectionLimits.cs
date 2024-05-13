@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> sponsored_data_rate_limit
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit> SponsoredDataRateLimit { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit> SponsoredDataRateLimit { get; set; }
         /// <summary>
         /// >> token_limit
         /// </summary>
@@ -91,7 +91,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
             AccountTokenOwnershipLimit.Decode(byteArray, ref p);
             SponsoredDataSize = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
             SponsoredDataSize.Decode(byteArray, ref p);
-            SponsoredDataRateLimit = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit>();
+            SponsoredDataRateLimit = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit>();
             SponsoredDataRateLimit.Decode(byteArray, ref p);
             TokenLimit = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
             TokenLimit.Decode(byteArray, ref p);

@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,22 +37,22 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "ForeignAssetToCollection"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId), typeof(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "CollectionToForeignAsset"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId), typeof(Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "ForeignReserveAssetInstanceToTokenId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>), typeof(Opal.NetApiExt.Generated.Model.up_data_structs.TokenId)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "TokenIdToForeignReserveAssetInstance"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance)));
         }
         
         /// <summary>
         /// >> ForeignAssetToCollectionParams
         ///  The corresponding collections of foreign assets.
         /// </summary>
-        public static string ForeignAssetToCollectionParams(Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId key)
+        public static string ForeignAssetToCollectionParams(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId key)
         {
             return RequestGenerator.GetStorage("ForeignAssets", "ForeignAssetToCollection", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -72,10 +72,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ForeignAssetToCollection
         ///  The corresponding collections of foreign assets.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId> ForeignAssetToCollection(Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> ForeignAssetToCollection(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.ForeignAssetToCollectionParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, blockhash, token);
             return result;
         }
         
@@ -83,7 +83,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> CollectionToForeignAssetParams
         ///  The corresponding foreign assets of collections.
         /// </summary>
-        public static string CollectionToForeignAssetParams(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId key)
+        public static string CollectionToForeignAssetParams(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key)
         {
             return RequestGenerator.GetStorage("ForeignAssets", "CollectionToForeignAsset", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -103,10 +103,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> CollectionToForeignAsset
         ///  The corresponding foreign assets of collections.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId> CollectionToForeignAsset(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId> CollectionToForeignAsset(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.CollectionToForeignAssetParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>(parameters, blockhash, token);
             return result;
         }
         
@@ -114,7 +114,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ForeignReserveAssetInstanceToTokenIdParams
         ///  The correponding NFT token id of reserve NFTs
         /// </summary>
-        public static string ForeignReserveAssetInstanceToTokenIdParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> key)
+        public static string ForeignReserveAssetInstanceToTokenIdParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> key)
         {
             return RequestGenerator.GetStorage("ForeignAssets", "ForeignReserveAssetInstanceToTokenId", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -134,10 +134,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ForeignReserveAssetInstanceToTokenId
         ///  The correponding NFT token id of reserve NFTs
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> ForeignReserveAssetInstanceToTokenId(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> ForeignReserveAssetInstanceToTokenId(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.ForeignReserveAssetInstanceToTokenIdParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.up_data_structs.TokenId>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>(parameters, blockhash, token);
             return result;
         }
         
@@ -145,7 +145,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> TokenIdToForeignReserveAssetInstanceParams
         ///  The correponding reserve NFT of a token ID
         /// </summary>
-        public static string TokenIdToForeignReserveAssetInstanceParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
+        public static string TokenIdToForeignReserveAssetInstanceParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
         {
             return RequestGenerator.GetStorage("ForeignAssets", "TokenIdToForeignReserveAssetInstance", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -165,10 +165,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> TokenIdToForeignReserveAssetInstance
         ///  The correponding reserve NFT of a token ID
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> TokenIdToForeignReserveAssetInstance(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> TokenIdToForeignReserveAssetInstance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.TokenIdToForeignReserveAssetInstanceParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>(parameters, blockhash, token);
             return result;
         }
     }
@@ -183,7 +183,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_register_foreign_asset
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceRegisterForeignAsset(Opal.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId versioned_asset_id, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 name, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 token_prefix, Opal.NetApiExt.Generated.Model.pallet_foreign_assets.EnumForeignCollectionMode mode)
+        public static Method ForceRegisterForeignAsset(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId versioned_asset_id, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 name, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 token_prefix, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumForeignCollectionMode mode)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(versioned_asset_id.Encode());

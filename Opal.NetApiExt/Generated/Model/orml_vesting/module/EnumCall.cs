@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.orml_vesting.module
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.module
 {
     
     
@@ -51,7 +51,7 @@ namespace Opal.NetApiExt.Generated.Model.orml_vesting.module
     /// >> 123 - Variant[orml_vesting.module.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, BaseTuple<Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Opal.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>>, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>>, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>
     {
     }
 }

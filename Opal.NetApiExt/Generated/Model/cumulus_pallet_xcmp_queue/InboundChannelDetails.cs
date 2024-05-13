@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
         /// <summary>
         /// >> sender
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Sender { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Sender { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState State { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState State { get; set; }
         /// <summary>
         /// >> message_metadata
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.EnumXcmpMessageFormat>> MessageMetadata { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.EnumXcmpMessageFormat>> MessageMetadata { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Sender = new Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
+            Sender = new Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Sender.Decode(byteArray, ref p);
-            State = new Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState();
+            State = new Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState();
             State.Decode(byteArray, ref p);
-            MessageMetadata = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.EnumXcmpMessageFormat>>();
+            MessageMetadata = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.EnumXcmpMessageFormat>>();
             MessageMetadata.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

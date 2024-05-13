@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
     /// <summary>
     /// >> 213 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
+    public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
     {
     }
 }

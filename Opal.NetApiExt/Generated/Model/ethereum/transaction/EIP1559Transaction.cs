@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction
 {
     
     
@@ -31,27 +31,27 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> nonce
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 Nonce { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 Nonce { get; set; }
         /// <summary>
         /// >> max_priority_fee_per_gas
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 MaxPriorityFeePerGas { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 MaxPriorityFeePerGas { get; set; }
         /// <summary>
         /// >> max_fee_per_gas
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 MaxFeePerGas { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 MaxFeePerGas { get; set; }
         /// <summary>
         /// >> gas_limit
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
         /// <summary>
         /// >> action
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction Action { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction Action { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 Value { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 Value { get; set; }
         /// <summary>
         /// >> input
         /// </summary>
@@ -59,7 +59,7 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> access_list
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem> AccessList { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem> AccessList { get; set; }
         /// <summary>
         /// >> odd_y_parity
         /// </summary>
@@ -67,11 +67,11 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> r
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 R { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 R { get; set; }
         /// <summary>
         /// >> s
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 S { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 S { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -104,27 +104,27 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
             var start = p;
             ChainId = new Substrate.NetApi.Model.Types.Primitive.U64();
             ChainId.Decode(byteArray, ref p);
-            Nonce = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            Nonce = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             Nonce.Decode(byteArray, ref p);
-            MaxPriorityFeePerGas = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            MaxPriorityFeePerGas = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             MaxPriorityFeePerGas.Decode(byteArray, ref p);
-            MaxFeePerGas = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            MaxFeePerGas = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             MaxFeePerGas.Decode(byteArray, ref p);
-            GasLimit = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            GasLimit = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             GasLimit.Decode(byteArray, ref p);
-            Action = new Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction();
+            Action = new Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction();
             Action.Decode(byteArray, ref p);
-            Value = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            Value = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             Value.Decode(byteArray, ref p);
             Input = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Input.Decode(byteArray, ref p);
-            AccessList = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem>();
+            AccessList = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem>();
             AccessList.Decode(byteArray, ref p);
             OddYParity = new Substrate.NetApi.Model.Types.Primitive.Bool();
             OddYParity.Decode(byteArray, ref p);
-            R = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            R = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             R.Decode(byteArray, ref p);
-            S = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            S = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             S.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

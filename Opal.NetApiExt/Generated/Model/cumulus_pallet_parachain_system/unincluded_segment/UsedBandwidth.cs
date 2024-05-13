@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.uninclu
         /// <summary>
         /// >> hrmp_outgoing
         /// </summary>
-        public Opal.NetApiExt.Generated.Types.Base.BTreeMapT3 HrmpOutgoing { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 HrmpOutgoing { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,7 +61,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.uninclu
             UmpMsgCount.Decode(byteArray, ref p);
             UmpTotalBytes = new Substrate.NetApi.Model.Types.Primitive.U32();
             UmpTotalBytes.Decode(byteArray, ref p);
-            HrmpOutgoing = new Opal.NetApiExt.Generated.Types.Base.BTreeMapT3();
+            HrmpOutgoing = new Substrate.Opal.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
             HrmpOutgoing.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,8 +36,8 @@ namespace Opal.NetApiExt.Generated.Storage
         public AuraStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "CurrentSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "CurrentSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
         }
         
         /// <summary>
@@ -62,10 +62,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Authorities(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Authorities(string blockhash, CancellationToken token)
         {
             string parameters = AuraStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, blockhash, token);
             return result;
         }
         
@@ -95,10 +95,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  This will be set in `on_initialize`.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(string blockhash, CancellationToken token)
         {
             string parameters = AuraStorage.CurrentSlotParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, blockhash, token);
             return result;
         }
     }

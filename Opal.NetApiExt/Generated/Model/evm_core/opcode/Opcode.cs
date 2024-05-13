@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.evm_core.opcode
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.evm_core.opcode
 {
     
     

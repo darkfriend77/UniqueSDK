@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -38,12 +38,12 @@ namespace Opal.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "ProposalCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.pallet_treasury.Proposal)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Deactivated"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "SpendCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Spends"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.pallet_treasury.SpendStatus)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus)));
         }
         
         /// <summary>
@@ -99,10 +99,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Proposals
         ///  Proposals that have been made.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_treasury.Proposal> Proposals(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal> Proposals(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.ProposalsParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_treasury.Proposal>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>(parameters, blockhash, token);
             return result;
         }
         
@@ -157,10 +157,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> Approvals(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> Approvals(string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.ApprovalsParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, blockhash, token);
             return result;
         }
         
@@ -217,10 +217,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Spends
         ///  Spends that have been approved and being processed.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_treasury.SpendStatus> Spends(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus> Spends(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.SpendsParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_treasury.SpendStatus>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus>(parameters, blockhash, token);
             return result;
         }
     }
@@ -235,7 +235,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> propose_spend
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ProposeSpend(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
+        public static Method ProposeSpend(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(value.Encode());
@@ -269,7 +269,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> spend_local
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SpendLocal(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
+        public static Method SpendLocal(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(amount.Encode());
@@ -292,7 +292,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> spend
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Spend(Substrate.NetApi.Model.Types.Base.BaseTuple asset_kind, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 beneficiary, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> valid_from)
+        public static Method Spend(Substrate.NetApi.Model.Types.Base.BaseTuple asset_kind, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 beneficiary, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> valid_from)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(asset_kind.Encode());
@@ -347,9 +347,9 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  Fraction of a proposal's value that should be bonded in order to place the proposal.
         ///  An accepted proposal gets these back. A rejected proposal does not.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill ProposalBond()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill ProposalBond()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
             result.Create("0x50C30000");
             return result;
         }
@@ -391,9 +391,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Burn
         ///  Percentage of spare funds (if any) that are burnt per spend period.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill Burn()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill Burn()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
             result.Create("0x00000000");
             return result;
         }
@@ -402,9 +402,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> PalletId
         ///  The treasury's pallet id, used for deriving its sovereign account ID.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
         {
-            var result = new Opal.NetApiExt.Generated.Model.frame_support.PalletId();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.PalletId();
             result.Create("0x70792F7472737279");
             return result;
         }

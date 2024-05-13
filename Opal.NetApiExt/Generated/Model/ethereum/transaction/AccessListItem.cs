@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction
 {
     
     
@@ -27,11 +27,11 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> address
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H160 Address { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 Address { get; set; }
         /// <summary>
         /// >> storage_keys
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H256> StorageKeys { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> StorageKeys { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -52,9 +52,9 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Address = new Opal.NetApiExt.Generated.Model.primitive_types.H160();
+            Address = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160();
             Address.Decode(byteArray, ref p);
-            StorageKeys = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H256>();
+            StorageKeys = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             StorageKeys.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_foreign_assets.module
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module
 {
     
     
@@ -33,7 +33,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_foreign_assets.module
     /// >> 330 - Variant[pallet_foreign_assets.module.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Opal.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10, Opal.NetApiExt.Generated.Model.pallet_foreign_assets.EnumForeignCollectionMode>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumForeignCollectionMode>>
     {
     }
 }

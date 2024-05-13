@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet
 {
     
     

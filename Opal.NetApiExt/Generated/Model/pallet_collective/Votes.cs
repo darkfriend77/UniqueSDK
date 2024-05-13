@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_collective
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_collective
 {
     
     
@@ -35,11 +35,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_collective
         /// <summary>
         /// >> ayes
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Ayes { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Ayes { get; set; }
         /// <summary>
         /// >> nays
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Nays { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Nays { get; set; }
         /// <summary>
         /// >> end
         /// </summary>
@@ -71,9 +71,9 @@ namespace Opal.NetApiExt.Generated.Model.pallet_collective
             Index.Decode(byteArray, ref p);
             Threshold = new Substrate.NetApi.Model.Types.Primitive.U32();
             Threshold.Decode(byteArray, ref p);
-            Ayes = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+            Ayes = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
             Ayes.Decode(byteArray, ref p);
-            Nays = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+            Nays = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
             Nays.Decode(byteArray, ref p);
             End = new Substrate.NetApi.Model.Types.Primitive.U32();
             End.Decode(byteArray, ref p);

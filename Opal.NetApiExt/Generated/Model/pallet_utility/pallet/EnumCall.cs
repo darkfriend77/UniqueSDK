@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_utility.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_utility.pallet
 {
     
     
@@ -63,7 +63,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_utility.pallet
     /// >> 357 - Variant[pallet_utility.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, BaseTuple<Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller, Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, BaseTuple<Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller, Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

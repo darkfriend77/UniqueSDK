@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_scheduler
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_scheduler
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_scheduler
         /// <summary>
         /// >> maybe_id
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Types.Base.Arr32U8> MaybeId { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8> MaybeId { get; set; }
         /// <summary>
         /// >> priority
         /// </summary>
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_scheduler
         /// <summary>
         /// >> call
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Call { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Call { get; set; }
         /// <summary>
         /// >> maybe_periodic
         /// </summary>
@@ -43,7 +43,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_scheduler
         /// <summary>
         /// >> origin
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller Origin { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller Origin { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -67,15 +67,15 @@ namespace Opal.NetApiExt.Generated.Model.pallet_scheduler
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            MaybeId = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Types.Base.Arr32U8>();
+            MaybeId = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8>();
             MaybeId.Decode(byteArray, ref p);
             Priority = new Substrate.NetApi.Model.Types.Primitive.U8();
             Priority.Decode(byteArray, ref p);
-            Call = new Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
+            Call = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
             Call.Decode(byteArray, ref p);
             MaybePeriodic = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
             MaybePeriodic.Decode(byteArray, ref p);
-            Origin = new Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller();
+            Origin = new Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller();
             Origin.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

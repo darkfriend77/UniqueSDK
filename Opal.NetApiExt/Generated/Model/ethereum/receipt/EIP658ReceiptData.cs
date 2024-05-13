@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.receipt
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt
 {
     
     
@@ -31,15 +31,15 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.receipt
         /// <summary>
         /// >> used_gas
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.U256 UsedGas { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 UsedGas { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
         /// <summary>
         /// >> logs
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -64,11 +64,11 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.receipt
             var start = p;
             StatusCode = new Substrate.NetApi.Model.Types.Primitive.U8();
             StatusCode.Decode(byteArray, ref p);
-            UsedGas = new Opal.NetApiExt.Generated.Model.primitive_types.U256();
+            UsedGas = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256();
             UsedGas.Decode(byteArray, ref p);
-            LogsBloom = new Opal.NetApiExt.Generated.Model.ethbloom.Bloom();
+            LogsBloom = new Substrate.Opal.NET.NetApiExt.Generated.Model.ethbloom.Bloom();
             LogsBloom.Decode(byteArray, ref p);
-            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.log.Log>();
+            Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.log.Log>();
             Logs.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

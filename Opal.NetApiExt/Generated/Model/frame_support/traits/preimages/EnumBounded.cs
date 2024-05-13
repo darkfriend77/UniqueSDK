@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_support.traits.preimages
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.frame_support.traits.preimages
     /// <summary>
     /// >> 83 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
-    public sealed class EnumBounded : BaseEnumExt<Bounded, Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17, BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

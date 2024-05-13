@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_democracy.vote
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.vote
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_democracy.vote
     /// <summary>
     /// >> 496 - Variant[pallet_democracy.vote.Voting]
     /// </summary>
-    public sealed class EnumVoting : BaseEnumExt<Voting, BaseTuple<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30, Opal.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Opal.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.pallet_democracy.conviction.EnumConviction, Opal.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Opal.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>
+    public sealed class EnumVoting : BaseEnumExt<Voting, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.conviction.EnumConviction, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>
     {
     }
 }

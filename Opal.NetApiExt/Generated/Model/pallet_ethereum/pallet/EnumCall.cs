@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_ethereum.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
 {
     
     
@@ -33,7 +33,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_ethereum.pallet
     /// >> 339 - Variant[pallet_ethereum.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2>
     {
     }
 }

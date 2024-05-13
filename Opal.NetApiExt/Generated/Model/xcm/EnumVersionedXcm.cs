@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm
     /// <summary>
     /// >> 255 - Variant[xcm.VersionedXcm]
     /// </summary>
-    public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Opal.NetApiExt.Generated.Model.xcm.v2.XcmT2, Opal.NetApiExt.Generated.Model.xcm.v3.XcmT2>
+    public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2>
     {
     }
 }

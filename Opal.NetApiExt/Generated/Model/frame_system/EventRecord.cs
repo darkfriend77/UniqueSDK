@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_system
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> phase
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_system.EnumPhase Phase { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EnumPhase Phase { get; set; }
         /// <summary>
         /// >> event
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeEvent Event { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeEvent Event { get; set; }
         /// <summary>
         /// >> topics
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H256> Topics { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> Topics { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.frame_system
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Phase = new Opal.NetApiExt.Generated.Model.frame_system.EnumPhase();
+            Phase = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
             Phase.Decode(byteArray, ref p);
-            Event = new Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeEvent();
+            Event = new Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeEvent();
             Event.Decode(byteArray, ref p);
-            Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H256>();
+            Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             Topics.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

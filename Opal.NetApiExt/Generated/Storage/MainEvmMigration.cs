@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,13 +37,13 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("EvmMigration", "MigrationPending"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.primitive_types.H160), typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160), typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
         
         /// <summary>
         /// >> MigrationPendingParams
         /// </summary>
-        public static string MigrationPendingParams(Opal.NetApiExt.Generated.Model.primitive_types.H160 key)
+        public static string MigrationPendingParams(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 key)
         {
             return RequestGenerator.GetStorage("EvmMigration", "MigrationPending", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -62,7 +62,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> MigrationPending
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> MigrationPending(Opal.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> MigrationPending(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmMigrationStorage.MigrationPendingParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
@@ -80,7 +80,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> begin
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Begin(Opal.NetApiExt.Generated.Model.primitive_types.H160 address)
+        public static Method Begin(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 address)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(address.Encode());
@@ -91,7 +91,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_data
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetData(Opal.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Model.primitive_types.H256>> data)
+        public static Method SetData(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>> data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(address.Encode());
@@ -103,7 +103,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> finish
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Finish(Opal.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
+        public static Method Finish(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(address.Encode());
@@ -115,7 +115,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> insert_eth_logs
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method InsertEthLogs(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.log.Log> logs)
+        public static Method InsertEthLogs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.log.Log> logs)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(logs.Encode());

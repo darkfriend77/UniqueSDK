@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -38,7 +38,7 @@ namespace Opal.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "WeightToFeeCoefficientOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "MinGasPriceOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "AppPromomotionConfigurationOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "AppPromomotionConfigurationOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "CollatorSelectionDesiredCollatorsOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "CollatorSelectionLicenseBondOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Configuration", "CollatorSelectionKickThresholdOverride"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -118,10 +118,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> AppPromomotionConfigurationOverride
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration> AppPromomotionConfigurationOverride(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration> AppPromomotionConfigurationOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.AppPromomotionConfigurationOverrideParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration>(parameters, blockhash, token);
             return result;
         }
         
@@ -239,7 +239,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_app_promotion_configuration_override
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetAppPromotionConfigurationOverride(Opal.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration configuration)
+        public static Method SetAppPromotionConfigurationOverride(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration configuration)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(configuration.Encode());
@@ -319,9 +319,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> AppPromotionDailyRate
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill AppPromotionDailyRate()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill AppPromotionDailyRate()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
             result.Create("0x88EA0600");
             return result;
         }

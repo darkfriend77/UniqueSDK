@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_balances.types
         /// <summary>
         /// >> id
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeHoldReason Id { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeHoldReason Id { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
@@ -52,7 +52,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_balances.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeHoldReason();
+            Id = new Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeHoldReason();
             Id.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);

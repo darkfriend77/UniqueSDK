@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,12 +37,12 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "IdentityOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Opal.NetApiExt.Generated.Model.pallet_identity.types.Registration)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "SuperOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumData>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "SubsOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "Registrars"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "Registrars"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26)));
         }
         
         /// <summary>
@@ -51,7 +51,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public static string IdentityOfParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string IdentityOfParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("Identity", "IdentityOf", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -73,10 +73,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_identity.types.Registration> IdentityOf(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration> IdentityOf(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = IdentityStorage.IdentityOfParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_identity.types.Registration>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration>(parameters, blockhash, token);
             return result;
         }
         
@@ -85,7 +85,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  The super-identity of an alternative "sub" identity together with its name, within that
         ///  context. If the account is not some other account's sub-identity, then just `None`.
         /// </summary>
-        public static string SuperOfParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string SuperOfParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("Identity", "SuperOf", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -106,10 +106,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  The super-identity of an alternative "sub" identity together with its name, within that
         ///  context. If the account is not some other account's sub-identity, then just `None`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumData>> SuperOf(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>> SuperOf(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = IdentityStorage.SuperOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>(parameters, blockhash, token);
             return result;
         }
         
@@ -121,7 +121,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public static string SubsOfParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string SubsOfParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("Identity", "SubsOf", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -145,10 +145,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>> SubsOf(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>> SubsOf(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = IdentityStorage.SubsOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>>(parameters, blockhash, token);
             return result;
         }
         
@@ -180,10 +180,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> Registrars(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> Registrars(string blockhash, CancellationToken token)
         {
             string parameters = IdentityStorage.RegistrarsParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>(parameters, blockhash, token);
             return result;
         }
     }
@@ -198,7 +198,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> add_registrar
         /// Identity pallet declaration.
         /// </summary>
-        public static Method AddRegistrar(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress account)
+        public static Method AddRegistrar(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress account)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(account.Encode());
@@ -209,7 +209,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_identity
         /// Identity pallet declaration.
         /// </summary>
-        public static Method SetIdentity(Opal.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo info)
+        public static Method SetIdentity(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo info)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(info.Encode());
@@ -220,7 +220,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_subs
         /// Identity pallet declaration.
         /// </summary>
-        public static Method SetSubs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumData>> subs)
+        public static Method SetSubs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>> subs)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(subs.Encode());
@@ -276,7 +276,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_account_id
         /// Identity pallet declaration.
         /// </summary>
-        public static Method SetAccountId(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
+        public static Method SetAccountId(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());
@@ -288,7 +288,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_fields
         /// Identity pallet declaration.
         /// </summary>
-        public static Method SetFields(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Opal.NetApiExt.Generated.Model.pallet_identity.types.BitFlags fields)
+        public static Method SetFields(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags fields)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());
@@ -300,7 +300,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> provide_judgement
         /// Identity pallet declaration.
         /// </summary>
-        public static Method ProvideJudgement(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> reg_index, Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress target, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement judgement, Opal.NetApiExt.Generated.Model.primitive_types.H256 identity)
+        public static Method ProvideJudgement(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> reg_index, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress target, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement judgement, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 identity)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(reg_index.Encode());
@@ -314,7 +314,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> kill_identity
         /// Identity pallet declaration.
         /// </summary>
-        public static Method KillIdentity(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress target)
+        public static Method KillIdentity(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress target)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(target.Encode());
@@ -325,7 +325,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> add_sub
         /// Identity pallet declaration.
         /// </summary>
-        public static Method AddSub(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress sub, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumData data)
+        public static Method AddSub(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress sub, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(sub.Encode());
@@ -337,7 +337,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> rename_sub
         /// Identity pallet declaration.
         /// </summary>
-        public static Method RenameSub(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress sub, Opal.NetApiExt.Generated.Model.pallet_identity.types.EnumData data)
+        public static Method RenameSub(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress sub, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(sub.Encode());
@@ -349,7 +349,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> remove_sub
         /// Identity pallet declaration.
         /// </summary>
-        public static Method RemoveSub(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress sub)
+        public static Method RemoveSub(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress sub)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(sub.Encode());
@@ -370,7 +370,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_insert_identities
         /// Identity pallet declaration.
         /// </summary>
-        public static Method ForceInsertIdentities(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.pallet_identity.types.Registration>> identities)
+        public static Method ForceInsertIdentities(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration>> identities)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(identities.Encode());
@@ -381,7 +381,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_remove_identities
         /// Identity pallet declaration.
         /// </summary>
-        public static Method ForceRemoveIdentities(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> identities)
+        public static Method ForceRemoveIdentities(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> identities)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(identities.Encode());
@@ -392,7 +392,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_set_subs
         /// Identity pallet declaration.
         /// </summary>
-        public static Method ForceSetSubs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>>> subs)
+        public static Method ForceSetSubs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>>> subs)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(subs.Encode());

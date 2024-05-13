@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_evm_contract_helpers.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm_contract_helpers.pallet
 {
     
     
@@ -45,7 +45,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_evm_contract_helpers.pallet
     /// >> 383 - Variant[pallet_evm_contract_helpers.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H160, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H160, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Opal.NetApiExt.Generated.Model.primitive_types.H160>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {
     }
 }

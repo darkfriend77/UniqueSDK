@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types
 {
     
     
@@ -55,11 +55,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
         /// <summary>
         /// >> min_approval
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinApproval { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinApproval { get; set; }
         /// <summary>
         /// >> min_support
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinSupport { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinSupport { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -101,9 +101,9 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
             ConfirmPeriod.Decode(byteArray, ref p);
             MinEnactmentPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             MinEnactmentPeriod.Decode(byteArray, ref p);
-            MinApproval = new Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve();
+            MinApproval = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve();
             MinApproval.Decode(byteArray, ref p);
-            MinSupport = new Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve();
+            MinSupport = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve();
             MinSupport.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

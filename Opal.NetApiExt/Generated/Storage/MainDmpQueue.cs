@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,8 +36,8 @@ namespace Opal.NetApiExt.Generated.Storage
         public DmpQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "Configuration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "PageIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "Configuration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "PageIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "Pages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "Overweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -67,10 +67,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Configuration
         ///  The configuration.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData> Configuration(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData> Configuration(string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.ConfigurationParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData>(parameters, blockhash, token);
             return result;
         }
         
@@ -96,10 +96,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> PageIndex
         ///  The page index.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData> PageIndex(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData> PageIndex(string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.PageIndexParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>(parameters, blockhash, token);
             return result;
         }
         
@@ -205,7 +205,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> service_overweight
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ServiceOverweight(Substrate.NetApi.Model.Types.Primitive.U64 index, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight_limit)
+        public static Method ServiceOverweight(Substrate.NetApi.Model.Types.Primitive.U64 index, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());

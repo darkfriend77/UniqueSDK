@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3.multiasset
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3.multiasset
     /// <summary>
     /// >> 52 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Opal.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

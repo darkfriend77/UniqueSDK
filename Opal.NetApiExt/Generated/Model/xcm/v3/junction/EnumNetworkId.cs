@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3.junction
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.junction
 {
     
     
@@ -75,7 +75,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3.junction
     /// <summary>
     /// >> 58 - Variant[xcm.v3.junction.NetworkId]
     /// </summary>
-    public sealed class EnumNetworkId : BaseEnumExt<NetworkId, Opal.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Opal.NetApiExt.Generated.Types.Base.Arr32U8>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid, BaseVoid>
+    public sealed class EnumNetworkId : BaseEnumExt<NetworkId, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid, BaseVoid>
     {
     }
 }

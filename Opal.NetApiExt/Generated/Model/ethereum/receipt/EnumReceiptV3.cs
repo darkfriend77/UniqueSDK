@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.receipt
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.receipt
     /// <summary>
     /// >> 649 - Variant[ethereum.receipt.ReceiptV3]
     /// </summary>
-    public sealed class EnumReceiptV3 : BaseEnumExt<ReceiptV3, Opal.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Opal.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Opal.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>
+    public sealed class EnumReceiptV3 : BaseEnumExt<ReceiptV3, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>
     {
     }
 }

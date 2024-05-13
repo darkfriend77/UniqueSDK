@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress
 {
     
     
@@ -50,7 +50,7 @@ namespace Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress
     /// <summary>
     /// >> 116 - Variant[sp_runtime.multiaddress.MultiAddress]
     /// </summary>
-    public sealed class EnumMultiAddress : BaseEnumExt<MultiAddress, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Base.BaseTuple>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Types.Base.Arr20U8>
+    public sealed class EnumMultiAddress : BaseEnumExt<MultiAddress, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Base.BaseTuple>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr20U8>
     {
     }
 }

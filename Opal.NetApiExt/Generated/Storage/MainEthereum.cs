@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,13 +36,13 @@ namespace Opal.NetApiExt.Generated.Storage
         public EthereumStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "Pending"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Opal.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Opal.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "CurrentBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.ethereum.block.Block)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "CurrentReceipts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "CurrentTransactionStatuses"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "Pending"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Opal.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "CurrentBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.block.Block)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "CurrentReceipts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "CurrentTransactionStatuses"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "BlockHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.primitive_types.U256), typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "InjectedNonce"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.primitive_types.U256)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Ethereum", "InjectedNonce"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256)));
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Pending
         ///  Current building block's transactions and receipts.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Opal.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Opal.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>> Pending(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Opal.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>> Pending(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.PendingParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Opal.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Opal.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Opal.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -96,10 +96,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> CurrentBlock
         ///  The current Ethereum block.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.ethereum.block.Block> CurrentBlock(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.block.Block> CurrentBlock(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.CurrentBlockParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.ethereum.block.Block>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.block.Block>(parameters, blockhash, token);
             return result;
         }
         
@@ -125,10 +125,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> CurrentReceipts
         ///  The current Ethereum receipts.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>> CurrentReceipts(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>> CurrentReceipts(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.CurrentReceiptsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>(parameters, blockhash, token);
             return result;
         }
         
@@ -154,17 +154,17 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> CurrentTransactionStatuses
         ///  The current transaction statuses.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>> CurrentTransactionStatuses(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>> CurrentTransactionStatuses(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.CurrentTransactionStatusesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> BlockHashParams
         /// </summary>
-        public static string BlockHashParams(Opal.NetApiExt.Generated.Model.primitive_types.U256 key)
+        public static string BlockHashParams(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 key)
         {
             return RequestGenerator.GetStorage("Ethereum", "BlockHash", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -183,10 +183,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> BlockHash
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Opal.NetApiExt.Generated.Model.primitive_types.U256 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256 key, string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.BlockHashParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -212,10 +212,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> InjectedNonce
         ///  Injected transactions should have unique nonce, here we store current
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.primitive_types.U256> InjectedNonce(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256> InjectedNonce(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.InjectedNonceParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.primitive_types.U256>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.U256>(parameters, blockhash, token);
             return result;
         }
     }
@@ -230,7 +230,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transact
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Transact(Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2 transaction)
+        public static Method Transact(Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2 transaction)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(transaction.Encode());

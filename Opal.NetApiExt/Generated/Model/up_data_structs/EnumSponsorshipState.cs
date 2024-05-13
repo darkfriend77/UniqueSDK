@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
     /// <summary>
     /// >> 660 - Variant[up_data_structs.SponsorshipState]
     /// </summary>
-    public sealed class EnumSponsorshipState : BaseEnumExt<SponsorshipState, BaseVoid, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr>
+    public sealed class EnumSponsorshipState : BaseEnumExt<SponsorshipState, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr>
     {
     }
 }

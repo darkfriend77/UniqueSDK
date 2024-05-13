@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -157,7 +157,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> batch_all
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method BatchAll(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall> calls)
+        public static Method BatchAll(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumRuntimeCall> calls)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(calls.Encode());

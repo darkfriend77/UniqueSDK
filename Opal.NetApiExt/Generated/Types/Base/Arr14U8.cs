@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Types.Base
+namespace Substrate.Opal.NET.NetApiExt.Generated.Types.Base
 {
     
     

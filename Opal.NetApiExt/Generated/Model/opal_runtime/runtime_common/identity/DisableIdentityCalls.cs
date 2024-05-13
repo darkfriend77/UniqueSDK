@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common.identity
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common.identity
 {
     
     

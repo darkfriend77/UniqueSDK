@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
 {
     
     
@@ -52,7 +52,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
     /// >> 30 - Variant[pallet_state_trie_migration.pallet.Event]
     /// Inner events of this pallet.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumMigrationCompute>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumError>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumMigrationCompute>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumError>
     {
     }
 }

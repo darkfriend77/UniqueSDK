@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_foreign_assets.module
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module
 {
     
     
@@ -33,7 +33,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_foreign_assets.module
     /// >> 372 - Variant[pallet_foreign_assets.module.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>>
     {
     }
 }

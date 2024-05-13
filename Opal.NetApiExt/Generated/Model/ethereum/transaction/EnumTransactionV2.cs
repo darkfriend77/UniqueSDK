@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.transaction
     /// <summary>
     /// >> 340 - Variant[ethereum.transaction.TransactionV2]
     /// </summary>
-    public sealed class EnumTransactionV2 : BaseEnumExt<TransactionV2, Opal.NetApiExt.Generated.Model.ethereum.transaction.LegacyTransaction, Opal.NetApiExt.Generated.Model.ethereum.transaction.EIP2930Transaction, Opal.NetApiExt.Generated.Model.ethereum.transaction.EIP1559Transaction>
+    public sealed class EnumTransactionV2 : BaseEnumExt<TransactionV2, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.LegacyTransaction, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EIP2930Transaction, Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EIP1559Transaction>
     {
     }
 }

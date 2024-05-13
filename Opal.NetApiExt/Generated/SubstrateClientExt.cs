@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Opal.NetApiExt.Generated.Storage;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Meta;
 using Substrate.NetApi.Model.Types.Base;
+using Substrate.Opal.NET.NetApiExt.Generated.Storage;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated
+namespace Substrate.Opal.NET.NetApiExt.Generated
 {
     
     

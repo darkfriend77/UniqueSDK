@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.types
     /// <summary>
     /// >> 532 - Variant[pallet_referenda.types.Curve]
     /// </summary>
-    public sealed class EnumCurve : BaseEnumExt<Curve, BaseTuple<Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>
+    public sealed class EnumCurve : BaseEnumExt<Curve, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>
     {
     }
 }

@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -38,13 +38,13 @@ namespace Opal.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "ReferendumCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "ReferendumInfoFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "TrackQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "DecidingCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "MetadataOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256)));
         }
         
         /// <summary>
@@ -100,10 +100,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ReferendumInfoFor
         ///  Information concerning any given referendum.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.ReferendumInfoForParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -137,10 +137,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.TrackQueueParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>(parameters, blockhash, token);
             return result;
         }
         
@@ -209,10 +209,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
         ///  large preimages.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.MetadataOfParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
     }
@@ -227,7 +227,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> submit
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Submit(Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller proposal_origin, Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded proposal, Opal.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime enactment_moment)
+        public static Method Submit(Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller proposal_origin, Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded proposal, Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime enactment_moment)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(proposal_origin.Encode());
@@ -317,7 +317,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_metadata
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 index, Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.primitive_types.H256> maybe_hash)
+        public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 index, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_hash)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());
@@ -383,9 +383,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Tracks
         ///  Information concerning the different referendum tracks.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Opal.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>> Tracks()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>> Tracks()
         {
-            var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Opal.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>>();
+            var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>>();
             result.Create("0x040A004C64656D6F63726163795F70726F706F73616C730A0000000000E8890423C78A000000000" +
                     "0000000190000002C01000032000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B00000" +
                     "0000065CD1D");

@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
 {
     
     
@@ -63,7 +63,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
     /// >> 89 - Variant[pallet_state_trie_migration.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>, BaseTuple<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits, Substrate.NetApi.Model.Types.Primitive.U32, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits, BaseTuple<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress>>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress>>
     {
     }
 }

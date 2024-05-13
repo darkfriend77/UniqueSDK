@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet
 {
     
     
@@ -69,7 +69,7 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet
     /// >> 363 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Opal.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

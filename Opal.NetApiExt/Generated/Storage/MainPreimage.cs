@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,18 +37,18 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "StatusFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256), typeof(Opal.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "RequestStatusFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Opal.NetApiExt.Generated.Model.primitive_types.H256), typeof(Opal.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "PreimageFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27)));
         }
         
         /// <summary>
         /// >> StatusForParams
         ///  The request status of a given hash.
         /// </summary>
-        public static string StatusForParams(Opal.NetApiExt.Generated.Model.primitive_types.H256 key)
+        public static string StatusForParams(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
         {
             return RequestGenerator.GetStorage("Preimage", "StatusFor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
@@ -68,10 +68,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> StatusFor
         ///  The request status of a given hash.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus> StatusFor(Opal.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus> StatusFor(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = PreimageStorage.StatusForParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus>(parameters, blockhash, token);
             return result;
         }
         
@@ -79,7 +79,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> RequestStatusForParams
         ///  The request status of a given hash.
         /// </summary>
-        public static string RequestStatusForParams(Opal.NetApiExt.Generated.Model.primitive_types.H256 key)
+        public static string RequestStatusForParams(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
         {
             return RequestGenerator.GetStorage("Preimage", "RequestStatusFor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
@@ -99,17 +99,17 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> RequestStatusFor
         ///  The request status of a given hash.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> RequestStatusFor(Opal.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> RequestStatusFor(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = PreimageStorage.RequestStatusForParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> PreimageForParams
         /// </summary>
-        public static string PreimageForParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+        public static string PreimageForParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
         {
             return RequestGenerator.GetStorage("Preimage", "PreimageFor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
@@ -128,10 +128,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27> PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27> PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = PreimageStorage.PreimageForParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27>(parameters, blockhash, token);
             return result;
         }
     }
@@ -157,7 +157,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> unnote_preimage
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method UnnotePreimage(Opal.NetApiExt.Generated.Model.primitive_types.H256 hash)
+        public static Method UnnotePreimage(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 hash)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hash.Encode());
@@ -168,7 +168,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> request_preimage
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RequestPreimage(Opal.NetApiExt.Generated.Model.primitive_types.H256 hash)
+        public static Method RequestPreimage(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 hash)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hash.Encode());
@@ -179,7 +179,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> unrequest_preimage
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method UnrequestPreimage(Opal.NetApiExt.Generated.Model.primitive_types.H256 hash)
+        public static Method UnrequestPreimage(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 hash)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hash.Encode());
@@ -190,7 +190,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> ensure_updated
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method EnsureUpdated(Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H256> hashes)
+        public static Method EnsureUpdated(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> hashes)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(hashes.Encode());

@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,15 +37,15 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "TotalStaked"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "Admin"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "Admin"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "Staked"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "StakesPerAccount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U8)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "PendingUnstake"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "PreviousCalculatedRecord"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "PreviousCalculatedRecord"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>)));
         }
         
         /// <summary>
@@ -99,10 +99,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Admin
         ///  Stores the `admin` account. Some extrinsics can only be executed if they were signed by `admin`.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Admin(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Admin(string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.AdminParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -115,7 +115,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  * **(Balance, BlockNumber)** - Balance of the stake.
         ///  The number of the relay block in which we must perform the interest recalculation
         /// </summary>
-        public static string StakedParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key)
+        public static string StakedParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key)
         {
             return RequestGenerator.GetStorage("AppPromotion", "Staked", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -140,7 +140,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  * **(Balance, BlockNumber)** - Balance of the stake.
         ///  The number of the relay block in which we must perform the interest recalculation
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> Staked(Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> Staked(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.StakedParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
@@ -154,7 +154,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  * **Key** - Staker account.
         ///  * **Value** - Amount of stakes.
         /// </summary>
-        public static string StakesPerAccountParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string StakesPerAccountParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("AppPromotion", "StakesPerAccount", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -177,7 +177,7 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  * **Key** - Staker account.
         ///  * **Value** - Amount of stakes.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U8> StakesPerAccount(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U8> StakesPerAccount(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.StakesPerAccountParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U8>(parameters, blockhash, token);
@@ -214,10 +214,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  * **Key** - Staker account.
         ///  * **Value** - Amount of stakes.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> PendingUnstake(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> PendingUnstake(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.PendingUnstakeParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>(parameters, blockhash, token);
             return result;
         }
         
@@ -245,10 +245,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  Stores a key for record for which the revenue recalculation was performed.
         ///  If `None`, then recalculation has not yet been performed or calculations have been completed for all stakers.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>> PreviousCalculatedRecord(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>> PreviousCalculatedRecord(string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.PreviousCalculatedRecordParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
     }
@@ -263,7 +263,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_admin_address
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetAdminAddress(Opal.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr admin)
+        public static Method SetAdminAddress(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr admin)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(admin.Encode());
@@ -306,7 +306,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> sponsor_collection
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SponsorCollection(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
+        public static Method SponsorCollection(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -317,7 +317,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> stop_sponsoring_collection
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method StopSponsoringCollection(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
+        public static Method StopSponsoringCollection(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -328,7 +328,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> sponsor_contract
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SponsorContract(Opal.NetApiExt.Generated.Model.primitive_types.H160 contract_id)
+        public static Method SponsorContract(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 contract_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(contract_id.Encode());
@@ -339,7 +339,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> stop_sponsoring_contract
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method StopSponsoringContract(Opal.NetApiExt.Generated.Model.primitive_types.H160 contract_id)
+        public static Method StopSponsoringContract(Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160 contract_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(contract_id.Encode());
@@ -379,9 +379,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> PalletId
         ///  The app's pallet id, used for deriving its sovereign account address.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
         {
-            var result = new Opal.NetApiExt.Generated.Model.frame_support.PalletId();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.PalletId();
             result.Create("0x6170707374616B65");
             return result;
         }
@@ -390,9 +390,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> FreezeIdentifier
         ///  Freeze identifier used by the pallet
         /// </summary>
-        public Opal.NetApiExt.Generated.Types.Base.Arr16U8 FreezeIdentifier()
+        public Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr16U8 FreezeIdentifier()
         {
-            var result = new Opal.NetApiExt.Generated.Types.Base.Arr16U8();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr16U8();
             result.Create("0x6170707374616B656170707374616B65");
             return result;
         }
@@ -423,9 +423,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> IntervalIncome
         ///  Rate of return for interval in blocks defined in `RecalculationInterval`.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill IntervalIncome()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill IntervalIncome()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
             result.Create("0x88EA0600");
             return result;
         }

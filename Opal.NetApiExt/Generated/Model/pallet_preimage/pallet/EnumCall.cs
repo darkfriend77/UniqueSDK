@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_preimage.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
 {
     
     
@@ -57,7 +57,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_preimage.pallet
     /// >> 196 - Variant[pallet_preimage.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Model.primitive_types.H256, Opal.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>>
     {
     }
 }

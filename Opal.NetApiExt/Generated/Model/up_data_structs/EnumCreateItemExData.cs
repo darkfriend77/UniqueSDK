@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -45,7 +45,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
     /// <summary>
     /// >> 308 - Variant[up_data_structs.CreateItemExData]
     /// </summary>
-    public sealed class EnumCreateItemExData : BaseEnumExt<CreateItemExData, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1, Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16, Opal.NetApiExt.Generated.Model.up_data_structs.CreateRefungibleExMultipleOwners>
+    public sealed class EnumCreateItemExData : BaseEnumExt<CreateItemExData, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1, Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16, Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CreateRefungibleExMultipleOwners>
     {
     }
 }

@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_pov_estimate_rpc
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc
 {
     
     
@@ -39,11 +39,11 @@ namespace Opal.NetApiExt.Generated.Model.up_pov_estimate_rpc
         /// <summary>
         /// >> results
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Types.Base.EnumResult> Results { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult> Results { get; set; }
         /// <summary>
         /// >> key_values
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue> KeyValues { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue> KeyValues { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -73,9 +73,9 @@ namespace Opal.NetApiExt.Generated.Model.up_pov_estimate_rpc
             CompactProofSize.Decode(byteArray, ref p);
             CompressedProofSize = new Substrate.NetApi.Model.Types.Primitive.U64();
             CompressedProofSize.Decode(byteArray, ref p);
-            Results = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Types.Base.EnumResult>();
+            Results = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult>();
             Results.Decode(byteArray, ref p);
-            KeyValues = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue>();
+            KeyValues = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue>();
             KeyValues.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

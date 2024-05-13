@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.polkadot_primitives.v6
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
 {
     
     
@@ -63,7 +63,7 @@ namespace Opal.NetApiExt.Generated.Model.polkadot_primitives.v6
         /// <summary>
         /// >> async_backing_params
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams AsyncBackingParams { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams AsyncBackingParams { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -110,7 +110,7 @@ namespace Opal.NetApiExt.Generated.Model.polkadot_primitives.v6
             ValidationUpgradeCooldown.Decode(byteArray, ref p);
             ValidationUpgradeDelay = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidationUpgradeDelay.Decode(byteArray, ref p);
-            AsyncBackingParams = new Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+            AsyncBackingParams = new Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
             AsyncBackingParams.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

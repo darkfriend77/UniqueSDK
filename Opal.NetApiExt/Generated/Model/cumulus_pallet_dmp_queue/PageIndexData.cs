@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
 {
     
     

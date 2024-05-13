@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3
     /// <summary>
     /// >> 135 - Variant[xcm.v3.WeightLimit]
     /// </summary>
-    public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
+    public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
     {
     }
 }

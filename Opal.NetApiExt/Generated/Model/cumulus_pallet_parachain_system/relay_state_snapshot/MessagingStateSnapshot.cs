@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot
 {
     
     
@@ -27,19 +27,19 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_s
         /// <summary>
         /// >> dmq_mqc_head
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 DmqMqcHead { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 DmqMqcHead { get; set; }
         /// <summary>
         /// >> relay_dispatch_queue_remaining_capacity
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity RelayDispatchQueueRemainingCapacity { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity RelayDispatchQueueRemainingCapacity { get; set; }
         /// <summary>
         /// >> ingress_channels
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>> IngressChannels { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>> IngressChannels { get; set; }
         /// <summary>
         /// >> egress_channels
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>> EgressChannels { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>> EgressChannels { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -62,13 +62,13 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_s
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            DmqMqcHead = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            DmqMqcHead = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             DmqMqcHead.Decode(byteArray, ref p);
-            RelayDispatchQueueRemainingCapacity = new Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity();
+            RelayDispatchQueueRemainingCapacity = new Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity();
             RelayDispatchQueueRemainingCapacity.Decode(byteArray, ref p);
-            IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>>();
+            IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>>();
             IngressChannels.Decode(byteArray, ref p);
-            EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>>();
+            EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>>();
             EgressChannels.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_referenda.pallet
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_referenda.pallet
 {
     
     
@@ -81,7 +81,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_referenda.pallet
     /// >> 206 - Variant[pallet_referenda.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Opal.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller, Opal.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded, Opal.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.primitive_types.H256>>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.EnumOriginCaller, Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded, Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>>>
     {
     }
 }

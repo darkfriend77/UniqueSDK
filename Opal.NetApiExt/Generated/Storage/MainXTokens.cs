@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -49,7 +49,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Transfer(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Opal.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method Transfer(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currency_id.Encode());
@@ -63,7 +63,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer_multiasset
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMultiasset(Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset asset, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Opal.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMultiasset(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset asset, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(asset.Encode());
@@ -76,7 +76,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer_with_fee
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferWithFee(Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 fee, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Opal.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferWithFee(Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 fee, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currency_id.Encode());
@@ -91,7 +91,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer_multiasset_with_fee
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMultiassetWithFee(Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset asset, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset fee, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Opal.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMultiassetWithFee(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset asset, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset fee, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(asset.Encode());
@@ -105,7 +105,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer_multicurrencies
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMulticurrencies(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Opal.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.NetApi.Model.Types.Primitive.U128>> currencies, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Opal.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMulticurrencies(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.NetApi.Model.Types.Primitive.U128>> currencies, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currencies.Encode());
@@ -119,7 +119,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> transfer_multiassets
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMultiassets(Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Opal.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Opal.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMultiassets(Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(assets.Encode());
@@ -140,9 +140,9 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> SelfLocation
         ///  Self chain location.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation SelfLocation()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation SelfLocation()
         {
-            var result = new Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
             result.Create("0x010100D51F");
             return result;
         }
@@ -154,9 +154,9 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  The actually weight for an XCM message is `T::BaseXcmWeight +
         ///  T::Weigher::weight(&msg)`.
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseXcmWeight()
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseXcmWeight()
         {
-            var result = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            var result = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             result.Create("0x0284D717A10F");
             return result;
         }

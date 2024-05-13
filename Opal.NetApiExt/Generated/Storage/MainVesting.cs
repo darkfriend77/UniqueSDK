@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -37,7 +37,7 @@ namespace Opal.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Vesting", "VestingSchedules"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24)));
         }
         
         /// <summary>
@@ -46,7 +46,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public static string VestingSchedulesParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string VestingSchedulesParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("Vesting", "VestingSchedules", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -68,10 +68,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> VestingSchedules(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> VestingSchedules(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = VestingStorage.VestingSchedulesParams(key);
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>(parameters, blockhash, token);
             return result;
         }
     }
@@ -96,7 +96,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> vested_transfer
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method VestedTransfer(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Opal.NetApiExt.Generated.Model.orml_vesting.VestingSchedule schedule)
+        public static Method VestedTransfer(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule schedule)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -108,7 +108,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> update_vesting_schedules
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method UpdateVestingSchedules(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.orml_vesting.VestingSchedule> vesting_schedules)
+        public static Method UpdateVestingSchedules(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule> vesting_schedules)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -120,7 +120,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> claim_for
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ClaimFor(Opal.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest)
+        public static Method ClaimFor(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());

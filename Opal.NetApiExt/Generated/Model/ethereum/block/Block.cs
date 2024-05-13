@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.ethereum.block
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.block
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.block
         /// <summary>
         /// >> header
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.ethereum.header.Header Header { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.header.Header Header { get; set; }
         /// <summary>
         /// >> transactions
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2> Transactions { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2> Transactions { get; set; }
         /// <summary>
         /// >> ommers
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.header.Header> Ommers { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.header.Header> Ommers { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.ethereum.block
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Header = new Opal.NetApiExt.Generated.Model.ethereum.header.Header();
+            Header = new Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.header.Header();
             Header.Decode(byteArray, ref p);
-            Transactions = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2>();
+            Transactions = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2>();
             Transactions.Decode(byteArray, ref p);
-            Ommers = new Substrate.NetApi.Model.Types.Base.BaseVec<Opal.NetApiExt.Generated.Model.ethereum.header.Header>();
+            Ommers = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Opal.NET.NetApiExt.Generated.Model.ethereum.header.Header>();
             Ommers.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

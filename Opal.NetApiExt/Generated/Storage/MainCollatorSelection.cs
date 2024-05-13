@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,12 +36,12 @@ namespace Opal.NetApiExt.Generated.Storage
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LicenseDepositOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LastAuthoredBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
         }
         
         /// <summary>
@@ -66,10 +66,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> Invulnerables(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> Invulnerables(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, blockhash, token);
             return result;
         }
         
@@ -77,7 +77,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> LicenseDepositOfParams
         ///  The (community) collation license holders.
         /// </summary>
-        public static string LicenseDepositOfParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string LicenseDepositOfParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("CollatorSelection", "LicenseDepositOf", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -97,7 +97,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> LicenseDepositOf
         ///  The (community) collation license holders.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> LicenseDepositOf(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> LicenseDepositOf(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.LicenseDepositOfParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
@@ -126,10 +126,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> Candidates(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> Candidates(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidatesParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, blockhash, token);
             return result;
         }
         
@@ -137,7 +137,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> LastAuthoredBlockParams
         ///  Last block authored by collator.
         /// </summary>
-        public static string LastAuthoredBlockParams(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        public static string LastAuthoredBlockParams(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
             return RequestGenerator.GetStorage("CollatorSelection", "LastAuthoredBlock", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -157,7 +157,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> LastAuthoredBlock
         ///  Last block authored by collator.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.LastAuthoredBlockParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -175,7 +175,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> add_invulnerable
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method AddInvulnerable(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 @new)
+        public static Method AddInvulnerable(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -186,7 +186,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> remove_invulnerable
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RemoveInvulnerable(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        public static Method RemoveInvulnerable(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -237,7 +237,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_release_license
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceReleaseLicense(Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        public static Method ForceReleaseLicense(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());

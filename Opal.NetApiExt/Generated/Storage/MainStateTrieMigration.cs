@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,9 +36,9 @@ namespace Opal.NetApiExt.Generated.Storage
         public StateTrieMigrationStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("StateTrieMigration", "MigrationProcess"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("StateTrieMigration", "AutoLimits"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("StateTrieMigration", "SignedMigrationMaxLimits"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("StateTrieMigration", "MigrationProcess"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("StateTrieMigration", "AutoLimits"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("StateTrieMigration", "SignedMigrationMaxLimits"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits)));
         }
         
         /// <summary>
@@ -69,10 +69,10 @@ namespace Opal.NetApiExt.Generated.Storage
         ///  This stores the snapshot of the last migrated keys. It can be set into motion and move
         ///  forward by any of the means provided by this pallet.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask> MigrationProcess(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask> MigrationProcess(string blockhash, CancellationToken token)
         {
             string parameters = StateTrieMigrationStorage.MigrationProcessParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask>(parameters, blockhash, token);
             return result;
         }
         
@@ -102,10 +102,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  If set to None, then no automatic migration happens.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>> AutoLimits(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>> AutoLimits(string blockhash, CancellationToken token)
         {
             string parameters = StateTrieMigrationStorage.AutoLimitsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>>(parameters, blockhash, token);
             return result;
         }
         
@@ -135,10 +135,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// 
         ///  If not set, no signed submission is allowed.
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> SignedMigrationMaxLimits(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> SignedMigrationMaxLimits(string blockhash, CancellationToken token)
         {
             string parameters = StateTrieMigrationStorage.SignedMigrationMaxLimitsParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>(parameters, blockhash, token);
             return result;
         }
     }
@@ -153,7 +153,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> control_auto_migration
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ControlAutoMigration(Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> maybe_config)
+        public static Method ControlAutoMigration(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> maybe_config)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(maybe_config.Encode());
@@ -164,7 +164,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> continue_migrate
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ContinueMigrate(Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits limits, Substrate.NetApi.Model.Types.Primitive.U32 real_size_upper, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask witness_task)
+        public static Method ContinueMigrate(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits limits, Substrate.NetApi.Model.Types.Primitive.U32 real_size_upper, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask witness_task)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(limits.Encode());
@@ -202,7 +202,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> set_signed_max_limits
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetSignedMaxLimits(Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits limits)
+        public static Method SetSignedMaxLimits(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits limits)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(limits.Encode());
@@ -213,7 +213,7 @@ namespace Opal.NetApiExt.Generated.Storage
         /// >> force_set_progress
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceSetProgress(Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress progress_top, Opal.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress progress_child)
+        public static Method ForceSetProgress(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress progress_top, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress progress_child)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(progress_top.Encode());

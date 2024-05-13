@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v2.multiasset
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
@@ -60,7 +60,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v2.multiasset
     /// <summary>
     /// >> 140 - Variant[xcm.v2.multiasset.AssetInstance]
     /// </summary>
-    public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Opal.NetApiExt.Generated.Types.Base.Arr4U8, Opal.NetApiExt.Generated.Types.Base.Arr8U8, Opal.NetApiExt.Generated.Types.Base.Arr16U8, Opal.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
+    public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
     {
     }
 }

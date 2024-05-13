@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.evm_core.error
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.evm_core.error
 {
     
     
@@ -105,7 +105,7 @@ namespace Opal.NetApiExt.Generated.Model.evm_core.error
     /// <summary>
     /// >> 377 - Variant[evm_core.error.ExitError]
     /// </summary>
-    public sealed class EnumExitError : BaseEnumExt<ExitError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Opal.NetApiExt.Generated.Types.Base.CowT1, BaseVoid, Opal.NetApiExt.Generated.Model.evm_core.opcode.Opcode>
+    public sealed class EnumExitError : BaseEnumExt<ExitError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.CowT1, BaseVoid, Substrate.Opal.NET.NetApiExt.Generated.Model.evm_core.opcode.Opcode>
     {
     }
 }

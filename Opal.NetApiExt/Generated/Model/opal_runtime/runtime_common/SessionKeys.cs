@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.runtime_common
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common
         /// <summary>
         /// >> aura
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public Aura { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public Aura { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.opal_runtime.runtime_common
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Aura = new Opal.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
+            Aura = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
             Aura.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

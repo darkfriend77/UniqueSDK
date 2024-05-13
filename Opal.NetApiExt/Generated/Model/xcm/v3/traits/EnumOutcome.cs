@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.xcm.v3.traits
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.traits
 {
     
     
@@ -40,7 +40,7 @@ namespace Opal.NetApiExt.Generated.Model.xcm.v3.traits
     /// <summary>
     /// >> 365 - Variant[xcm.v3.traits.Outcome]
     /// </summary>
-    public sealed class EnumOutcome : BaseEnumExt<Outcome, Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseTuple<Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Opal.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>, Opal.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>
+    public sealed class EnumOutcome : BaseEnumExt<Outcome, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>
     {
     }
 }

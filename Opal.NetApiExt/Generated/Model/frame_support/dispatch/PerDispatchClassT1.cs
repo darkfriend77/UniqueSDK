@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_support.dispatch
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_support.dispatch
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.frame_support.dispatch
         /// <summary>
         /// >> normal
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Normal { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Normal { get; set; }
         /// <summary>
         /// >> operational
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Operational { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Operational { get; set; }
         /// <summary>
         /// >> mandatory
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Mandatory { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Mandatory { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.frame_support.dispatch
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Normal = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            Normal = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             Normal.Decode(byteArray, ref p);
-            Operational = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            Operational = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             Operational.Decode(byteArray, ref p);
-            Mandatory = new Opal.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            Mandatory = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             Mandatory.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

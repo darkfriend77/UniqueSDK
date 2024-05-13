@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_evm
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_evm
 {
     
     
@@ -31,7 +31,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_evm
         /// <summary>
         /// >> hash
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.primitive_types.H256 Hash { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256 Hash { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_evm
             var start = p;
             Size = new Substrate.NetApi.Model.Types.Primitive.U64();
             Size.Decode(byteArray, ref p);
-            Hash = new Opal.NetApiExt.Generated.Model.primitive_types.H256();
+            Hash = new Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256();
             Hash.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

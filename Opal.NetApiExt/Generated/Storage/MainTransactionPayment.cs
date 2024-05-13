@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Opal.NetApiExt.Generated.Storage
+namespace Substrate.Opal.NET.NetApiExt.Generated.Storage
 {
     
     
@@ -36,8 +36,8 @@ namespace Opal.NetApiExt.Generated.Storage
         public TransactionPaymentStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TransactionPayment", "NextFeeMultiplier"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TransactionPayment", "StorageVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Opal.NetApiExt.Generated.Model.pallet_transaction_payment.EnumReleases)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TransactionPayment", "NextFeeMultiplier"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TransactionPayment", "StorageVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_transaction_payment.EnumReleases)));
         }
         
         /// <summary>
@@ -60,10 +60,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> NextFeeMultiplier
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> NextFeeMultiplier(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> NextFeeMultiplier(string blockhash, CancellationToken token)
         {
             string parameters = TransactionPaymentStorage.NextFeeMultiplierParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, blockhash, token);
             return result;
         }
         
@@ -87,10 +87,10 @@ namespace Opal.NetApiExt.Generated.Storage
         /// <summary>
         /// >> StorageVersion
         /// </summary>
-        public async Task<Opal.NetApiExt.Generated.Model.pallet_transaction_payment.EnumReleases> StorageVersion(string blockhash, CancellationToken token)
+        public async Task<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_transaction_payment.EnumReleases> StorageVersion(string blockhash, CancellationToken token)
         {
             string parameters = TransactionPaymentStorage.StorageVersionParams();
-            var result = await _client.GetStorageAsync<Opal.NetApiExt.Generated.Model.pallet_transaction_payment.EnumReleases>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_transaction_payment.EnumReleases>(parameters, blockhash, token);
             return result;
         }
     }

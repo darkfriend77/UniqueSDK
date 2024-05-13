@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> account
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Account { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Account { get; set; }
         /// <summary>
         /// >> fee
         /// </summary>
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> fields
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_identity.types.BitFlags Fields { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags Fields { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.pallet_identity.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Account = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Account = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Account.Decode(byteArray, ref p);
             Fee = new Substrate.NetApi.Model.Types.Primitive.U128();
             Fee.Decode(byteArray, ref p);
-            Fields = new Opal.NetApiExt.Generated.Model.pallet_identity.types.BitFlags();
+            Fields = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags();
             Fields.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

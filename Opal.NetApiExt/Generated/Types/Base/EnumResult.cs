@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Types.Base
+namespace Substrate.Opal.NET.NetApiExt.Generated.Types.Base
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Types.Base
     /// <summary>
     /// >> 611 - Variant[Result]
     /// </summary>
-    public sealed class EnumResult : BaseEnumExt<Result, Opal.NetApiExt.Generated.Types.Base.EnumResult, Opal.NetApiExt.Generated.Model.sp_runtime.transaction_validity.EnumTransactionValidityError>
+    public sealed class EnumResult : BaseEnumExt<Result, Substrate.Opal.NET.NetApiExt.Generated.Types.Base.EnumResult, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_runtime.transaction_validity.EnumTransactionValidityError>
     {
     }
 }

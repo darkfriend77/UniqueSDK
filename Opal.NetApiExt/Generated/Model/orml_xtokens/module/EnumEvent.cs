@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.orml_xtokens.module
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.orml_xtokens.module
 {
     
     
@@ -33,7 +33,7 @@ namespace Opal.NetApiExt.Generated.Model.orml_xtokens.module
     /// >> 48 - Variant[orml_xtokens.module.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Opal.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAsset, Opal.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.Opal.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAsset, Substrate.Opal.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>>
     {
     }
 }

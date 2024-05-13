@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.up_data_structs
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
@@ -27,7 +27,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> map
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1 Map { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1 Map { get; set; }
         /// <summary>
         /// >> consumed_space
         /// </summary>
@@ -57,7 +57,7 @@ namespace Opal.NetApiExt.Generated.Model.up_data_structs
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Map = new Opal.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1();
+            Map = new Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1();
             Map.Decode(byteArray, ref p);
             ConsumedSpace = new Substrate.NetApi.Model.Types.Primitive.U32();
             ConsumedSpace.Decode(byteArray, ref p);

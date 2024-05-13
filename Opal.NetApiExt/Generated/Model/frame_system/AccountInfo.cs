@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.frame_system
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system
 {
     
     
@@ -43,7 +43,7 @@ namespace Opal.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> data
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_balances.types.AccountData Data { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData Data { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -75,7 +75,7 @@ namespace Opal.NetApiExt.Generated.Model.frame_system
             Providers.Decode(byteArray, ref p);
             Sufficients = new Substrate.NetApi.Model.Types.Primitive.U32();
             Sufficients.Decode(byteArray, ref p);
-            Data = new Opal.NetApiExt.Generated.Model.pallet_balances.types.AccountData();
+            Data = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData();
             Data.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

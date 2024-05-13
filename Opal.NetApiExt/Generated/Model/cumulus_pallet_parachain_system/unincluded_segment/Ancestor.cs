@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment
 {
     
     
@@ -27,15 +27,15 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.uninclu
         /// <summary>
         /// >> used_bandwidth
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth UsedBandwidth { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth UsedBandwidth { get; set; }
         /// <summary>
         /// >> para_head_hash
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.primitive_types.H256> ParaHeadHash { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256> ParaHeadHash { get; set; }
         /// <summary>
         /// >> consumed_go_ahead_signal
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> ConsumedGoAheadSignal { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> ConsumedGoAheadSignal { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.uninclu
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            UsedBandwidth = new Opal.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth();
+            UsedBandwidth = new Substrate.Opal.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth();
             UsedBandwidth.Decode(byteArray, ref p);
-            ParaHeadHash = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.primitive_types.H256>();
+            ParaHeadHash = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             ParaHeadHash.Decode(byteArray, ref p);
-            ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Opal.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
+            ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Opal.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
             ConsumedGoAheadSignal.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

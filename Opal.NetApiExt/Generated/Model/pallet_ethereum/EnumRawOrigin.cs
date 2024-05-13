@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_ethereum
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_ethereum
 {
     
     
@@ -30,7 +30,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_ethereum
     /// <summary>
     /// >> 214 - Variant[pallet_ethereum.RawOrigin]
     /// </summary>
-    public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, Opal.NetApiExt.Generated.Model.primitive_types.H160>
+    public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, Substrate.Opal.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {
     }
 }

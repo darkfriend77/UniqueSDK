@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_democracy.types
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_democracy.types
     /// <summary>
     /// >> 493 - Variant[pallet_democracy.types.ReferendumInfo]
     /// </summary>
-    public sealed class EnumReferendumInfo : BaseEnumExt<ReferendumInfo, Opal.NetApiExt.Generated.Model.pallet_democracy.types.ReferendumStatus, BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumReferendumInfo : BaseEnumExt<ReferendumInfo, Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_democracy.types.ReferendumStatus, BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

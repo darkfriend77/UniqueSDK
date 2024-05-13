@@ -13,7 +13,7 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Opal.NetApiExt.Generated.Model.pallet_treasury
+namespace Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury
 {
     
     
@@ -35,7 +35,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_treasury
         /// <summary>
         /// >> beneficiary
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Beneficiary { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Beneficiary { get; set; }
         /// <summary>
         /// >> valid_from
         /// </summary>
@@ -47,7 +47,7 @@ namespace Opal.NetApiExt.Generated.Model.pallet_treasury
         /// <summary>
         /// >> status
         /// </summary>
-        public Opal.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState Status { get; set; }
+        public Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState Status { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -76,13 +76,13 @@ namespace Opal.NetApiExt.Generated.Model.pallet_treasury
             AssetKind.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);
-            Beneficiary = new Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+            Beneficiary = new Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Beneficiary.Decode(byteArray, ref p);
             ValidFrom = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidFrom.Decode(byteArray, ref p);
             ExpireAt = new Substrate.NetApi.Model.Types.Primitive.U32();
             ExpireAt.Decode(byteArray, ref p);
-            Status = new Opal.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
+            Status = new Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
             Status.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
