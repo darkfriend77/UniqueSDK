@@ -1,7 +1,7 @@
 ﻿using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
-using Opal.NetApiExt.Generated;
-using Opal.NetApiExt.Generated.Model.sp_core.crypto;
+using Substrate.Opal.NET.NetApiExt.Generated;
+using Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto;
 
 namespace UniqueSDK
 {
@@ -25,7 +25,7 @@ namespace UniqueSDK
             // If network is not provided, use the default one
             network ??= SdkConfig.UseDefaultNetwork;
 
-            Opal.NetApiExt.Generated.Model.frame_system.AccountInfo accountInfo = await substrateClient.SystemStorage.Account(
+            Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.AccountInfo accountInfo = await substrateClient.SystemStorage.Account(
                 accountId32,
                 null,
                 cancellationToken

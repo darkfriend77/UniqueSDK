@@ -2,7 +2,7 @@
 using Substrate.NET.Wallet.Keyring;
 using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Types;
-using Opal.NetApiExt.Generated;
+using Substrate.Opal.NET.NetApiExt.Generated;
 using UniqueSDK;
 
 namespace UniqueSDKTests

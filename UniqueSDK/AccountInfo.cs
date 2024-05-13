@@ -13,7 +13,7 @@ namespace UniqueSDK
         /// <param name="accountInfo"></param>
         /// <param name="decimals"></param>
         /// <param name="unit"></param>
-        public AccountInfo(Opal.NetApiExt.Generated.Model.frame_system.AccountInfo accountInfo, uint decimals, string unit)
+        public AccountInfo(Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system.AccountInfo accountInfo, uint decimals, string unit)
         {
             Nonce = accountInfo.Nonce.Value;
             Consumers = accountInfo.Consumers.Value;
@@ -57,7 +57,7 @@ namespace UniqueSDK
         /// Account Data Constructor
         /// </summary>
         /// <param name="accountData"></param>
-        public AccountData(Opal.NetApiExt.Generated.Model.pallet_balances.types.AccountData accountData, uint decimals, string unit)
+        public AccountData(Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData accountData, uint decimals, string unit)
         {
             Free = new Balance(accountData.Free.Value, decimals, unit);
             Reserved = new Balance(accountData.Reserved.Value, decimals, unit);

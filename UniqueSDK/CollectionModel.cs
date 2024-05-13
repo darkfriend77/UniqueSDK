@@ -7,9 +7,9 @@ using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types;
 using Substrate.NetApi.Model.Types.Base;
 using Substrate.NetApi.Model.Types.Primitive;
-using Opal.NetApiExt.Generated;
-using Opal.NetApiExt.Generated.Model.frame_system;
-using Opal.NetApiExt.Generated.Model.up_data_structs;
+using Substrate.Opal.NET.NetApiExt.Generated;
+using Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system;
+using Substrate.Opal.NET.NetApiExt.Generated.Model.up_data_structs;
 
 namespace UniqueSDK
 {
@@ -171,13 +171,13 @@ namespace UniqueSDK
                         foreach (var e in allExtrinsicEvents)
                         {
                             // Filter only Common.CollectionCreated events
-                            if (e.Event.Value == Opal.NetApiExt.Generated.Model.opal_runtime.RuntimeEvent.Common)
+                            if (e.Event.Value == Substrate.Opal.NET.NetApiExt.Generated.Model.opal_runtime.RuntimeEvent.Common)
                             {
-                                var commonEvent = (Opal.NetApiExt.Generated.Model.pallet_common.pallet.EnumEvent)e.Event.Value2;
+                                var commonEvent = (Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_common.pallet.EnumEvent)e.Event.Value2;
 
-                                if (commonEvent.Value == Opal.NetApiExt.Generated.Model.pallet_common.pallet.Event.CollectionCreated)
+                                if (commonEvent.Value == Substrate.Opal.NET.NetApiExt.Generated.Model.pallet_common.pallet.Event.CollectionCreated)
                                 {
-                                    var createdCollectionEvent = (BaseTuple<CollectionId, U8, Opal.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>)commonEvent.Value2;
+                                    var createdCollectionEvent = (BaseTuple<CollectionId, U8, Substrate.Opal.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>)commonEvent.Value2;
 
                                     collectionIdTask.TrySetResult(((CollectionId)createdCollectionEvent.Value[0]).Value);
 

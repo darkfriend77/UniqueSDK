@@ -3,8 +3,8 @@ using Substrate.NetApi.Model.Extrinsics;
 using Substrate.NetApi.Model.Rpc;
 using Substrate.NetApi.Model.Types.Base;
 using Substrate.NetApi.Model.Types.Primitive;
-using Opal.NetApiExt.Generated;
-using Opal.NetApiExt.Generated.Model.frame_system;
+using Substrate.Opal.NET.NetApiExt.Generated;
+using Substrate.Opal.NET.NetApiExt.Generated.Model.frame_system;
 
 namespace UniqueSDK
 {
